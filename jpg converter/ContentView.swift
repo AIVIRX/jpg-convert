@@ -820,10 +820,13 @@ struct SelectedImageView: View {
     
     var body: some View {
         ZStack {
-            // Dark background card
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color(.systemGray6))
+            // Clean image display
+            Image(uiImage: imageModel.originalImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
                 .frame(height: 120)
+                .clipped()
+                .cornerRadius(12)
             
             // Remove button in top right
             VStack {
@@ -833,8 +836,8 @@ struct SelectedImageView: View {
                     Button(action: onRemove) {
                         Image(systemName: "xmark.circle.fill")
                             .font(.title2)
-                            .foregroundColor(.black)
-                            .background(Color.white)
+                            .foregroundColor(.white)
+                            .background(Color.black.opacity(0.6))
                             .clipShape(Circle())
                     }
                 }
@@ -846,8 +849,10 @@ struct SelectedImageView: View {
             // Processing indicator (centered)
             if imageModel.isProcessing {
                 ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .secondary))
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     .scaleEffect(1.2)
+                    .background(Color.black.opacity(0.6))
+                    .clipShape(Circle())
             }
             
             // Error indicator (centered)
@@ -859,8 +864,10 @@ struct SelectedImageView: View {
                     
                     Text("Error")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.white)
                 }
+                .background(Color.black.opacity(0.6))
+                .cornerRadius(8)
             }
         }
         .frame(height: 120)
