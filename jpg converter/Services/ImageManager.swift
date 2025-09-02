@@ -178,6 +178,7 @@ class ImageManager: ObservableObject {
             print("Failed to fix image orientation, using original")
         }
         
+        
         return correctedImage ?? image
     }
     
