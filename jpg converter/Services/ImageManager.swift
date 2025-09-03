@@ -49,9 +49,11 @@ class ImageManager: ObservableObject {
     func addImagesFromPhotos(_ images: [UIImage]) {
         for image in images {
             // Images are already orientation-corrected when loaded from Photos picker
+            // Detect the actual format of the image
+            let detectedFormat = detectImageFormat(from: image)
             let imageModel = ImageConversionModel(
                 originalImage: image,
-                originalFormat: .jpg,
+                originalFormat: detectedFormat,
                 compressionQuality: 0.8
             )
             selectedImages.append(imageModel)
@@ -96,7 +98,30 @@ class ImageManager: ObservableObject {
     // MARK: - Image Format Detection
     
     private func detectImageFormat(from image: UIImage) -> ConversionFormat {
-        // Default to JPG if we can't determine format
+        // Try to detect format from image data
+        if let cgImage = image.cgImage {
+            // Check color space and alpha channel to make educated guesses
+            let hasAlpha = cgImage.alphaInfo != .none && cgImage.alphaInfo != .noneSkipLast
+            
+            // Check if it's likely a PNG (has alpha channel)
+            if hasAlpha {
+                return .png
+            }
+            
+            // Check color space for HEIC/HDR
+            if let colorSpace = cgImage.colorSpace {
+                let colorSpaceName = colorSpace.name
+                if colorSpaceName == CGColorSpace.extendedLinearSRGB || 
+                   colorSpaceName == CGColorSpace.extendedSRGB {
+                    return .heic
+                }
+            }
+            
+            // Default to JPG for most other cases
+            return .jpg
+        }
+        
+        // Fallback to JPG if we can't determine
         return .jpg
     }
     

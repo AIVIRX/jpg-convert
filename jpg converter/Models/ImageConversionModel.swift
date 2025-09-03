@@ -104,21 +104,21 @@ enum ConversionFormat: String, CaseIterable, Identifiable {
 
 // MARK: - Conversion Direction
 enum ConversionDirection {
-    case fromJPG
+    case fromAny
     
     var title: String {
-        return "Convert JPG to Other Formats"
+        return "Convert JPEG to Any Format"
     }
     
     var description: String {
-        return "Convert your JPG photos to PNG, HEIC, PDF, and more"
+        return "Convert your JPEG photos to PNG, HEIC, PDF, and more"
     }
     
     var sourceFormats: [ConversionFormat] {
-        return [.jpg]
+        return [.jpg, .png, .heic, .tiff] // Support all common formats
     }
     
     var targetFormats: [ConversionFormat] {
-        return [.png, .heic, .pdf, .tiff]
+        return [.jpg, .png, .heic, .pdf, .tiff] // Include JPG as a target option
     }
 }

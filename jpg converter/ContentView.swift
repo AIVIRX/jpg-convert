@@ -25,39 +25,78 @@ struct TransferableImage: Transferable {
     }
 }
 
+// MARK: - Main Tab View
 struct ContentView: View {
+    var body: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gearshape.fill")
+                    Text("Settings")
+                }
+        }
+        .accentColor(.accentColor)
+    }
+}
+
+// MARK: - Home View
+struct HomeView: View {
     @StateObject private var viewModel = ImageConverterViewModel()
     @State private var showFilesPicker = false
-    @State private var showResults = false
     @State private var selectedPhotos: [PhotosPickerItem] = []
     
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             VStack(spacing: 0) {
-                // Main Content
-                                ScrollView {
+                ScrollView {
                     VStack(spacing: 24) {
-                        // Image Selection Area (First)
+                        // Image Selection Area
                         imageSelectionView
                         
                         // Selected Images Grid
                         if !viewModel.selectedImages.isEmpty {
                             selectedImagesView
+                                .transition(.asymmetric(
+                                    insertion: .scale(scale: 0.7).combined(with: .opacity),
+                                    removal: .scale(scale: 0.9).combined(with: .opacity)
+                                ))
+                                .animation(.spring(response: 0.7, dampingFraction: 0.6), value: viewModel.selectedImages.count)
                         }
                         
-                        // Target Format Selection (After images are selected)
+                        // Target Format Selection
                         if !viewModel.selectedImages.isEmpty {
                             targetFormatSelectionView
+                                .transition(.asymmetric(
+                                    insertion: .move(edge: .leading).combined(with: .opacity),
+                                    removal: .move(edge: .leading).combined(with: .opacity)
+                                ))
+                                .animation(.spring(response: 0.5, dampingFraction: 0.8), value: viewModel.selectedImages.count)
                         }
                         
                         // Conversion Controls
                         if !viewModel.selectedImages.isEmpty {
                             conversionControlsView
+                                .transition(.asymmetric(
+                                    insertion: .move(edge: .trailing).combined(with: .opacity),
+                                    removal: .move(edge: .trailing).combined(with: .opacity)
+                                ))
+                                .animation(.spring(response: 0.5, dampingFraction: 0.8), value: viewModel.selectedImages.count)
                         }
                         
-                        // Results Section (after conversion)
+                        // Results Section
                         if !viewModel.selectedImages.isEmpty && viewModel.selectedImages.contains(where: { $0.convertedImage != nil }) {
                             resultsSectionView
+                                .transition(.asymmetric(
+                                    insertion: .scale(scale: 0.95).combined(with: .opacity),
+                                    removal: .scale(scale: 0.95).combined(with: .opacity)
+                                ))
+                                .animation(.spring(response: 0.6, dampingFraction: 0.8), value: viewModel.selectedImages.contains(where: { $0.convertedImage != nil }))
                         }
                         
                         // Pro Upgrade Banner
@@ -66,17 +105,14 @@ struct ContentView: View {
                         }
                     }
                     .padding(.horizontal, 20)
-                    .padding(.bottom, 100) // Space for bottom sheet
+                    .padding(.bottom, 100)
                 }
             }
             .background(Color(.systemGroupedBackground))
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .sheet(isPresented: $viewModel.showProUpgrade, onDismiss: {
-            // Reset showResults when Pro sheet is dismissed to prevent unwanted results display
-            showResults = false
-        }) {
+        .sheet(isPresented: $viewModel.showProUpgrade) {
             ProUpgradeView()
         }
         .onChange(of: selectedPhotos) { oldValue, newValue in
@@ -86,11 +122,10 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showFilesPicker) {
             FilesPickerView(isPresented: $showFilesPicker) { urls in
-                viewModel.addImagesFromFiles(urls)
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                    viewModel.addImagesFromFiles(urls)
+                }
             }
-        }
-        .sheet(isPresented: $showResults) {
-            ConversionResultsView(isPresented: $showResults, viewModel: viewModel)
         }
         .alert("Error", isPresented: $viewModel.showError) {
             Button("OK") { }
@@ -104,58 +139,289 @@ struct ContentView: View {
         }
     }
     
-    // MARK: - Results Section View
+    // MARK: - Helper Methods
+    private func saveAllConvertedImages() async {
+        for imageModel in viewModel.selectedImages {
+            if let convertedImage = imageModel.convertedImage,
+               let convertedFormat = imageModel.convertedFormat {
+                if convertedFormat == .pdf {
+                    await viewModel.exportToFiles(convertedImage, format: convertedFormat, imageModel: imageModel)
+                } else {
+                    await viewModel.exportToPhotos(convertedImage, format: convertedFormat)
+                }
+            }
+        }
+    }
+    
+    private func loadPhotosFromPicker(_ items: [PhotosPickerItem]) async {
+        var images: [UIImage] = []
+        
+        for item in items {
+            if let transferableImage = try? await item.loadTransferable(type: TransferableImage.self) {
+                let image = transferableImage.uiImage
+                let correctedImage = fixImageOrientation(image)
+                images.append(correctedImage)
+            }
+        }
+        
+        await MainActor.run {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                viewModel.addImagesFromPhotos(images)
+            }
+            selectedPhotos.removeAll()
+        }
+    }
+    
+    private func fixImageOrientation(_ image: UIImage) -> UIImage {
+        guard image.imageOrientation != .up else { return image }
+        
+        UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+        image.draw(in: CGRect(origin: .zero, size: image.size))
+        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return normalizedImage ?? image
+    }
+    
+    // MARK: - View Components
+    private var imageSelectionView: some View {
+        VStack(spacing: 10) {
+            Text("Select Images to Convert")
+                .font(.title2)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Text("Convert JPEG, PNG, HEIC and more to any format")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            HStack(spacing: 16) {
+                PhotosPicker(
+                    selection: $selectedPhotos,
+                    maxSelectionCount: 10,
+                    matching: .images,
+                    photoLibrary: .shared()
+                ) {
+                    VStack(spacing: 8) {
+                        Image(systemName: "photo.on.rectangle")
+                            .font(.title2)
+                            .foregroundColor(.accentColor)
+                        
+                        Text("Photos")
+                            .font(.caption)
+                            .fontWeight(.medium)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color(.systemGray5))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color(.systemGray4), lineWidth: 0.5)
+                    )
+                    .cornerRadius(12)
+                }
+                .scaleEffect(selectedPhotos.isEmpty ? 1.0 : 0.95)
+                .animation(.easeInOut(duration: 0.2), value: selectedPhotos.isEmpty)
+                
+                Button(action: {
+                    showFilesPicker = true
+                }) {
+                    VStack(spacing: 8) {
+                        Image(systemName: "folder")
+                            .font(.title2)
+                            .foregroundColor(.accentColor)
+                        
+                        Text("Files")
+                            .font(.caption)
+                            .fontWeight(.medium)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color(.systemGray5))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color(.systemGray4), lineWidth: 0.5)
+                    )
+                    .cornerRadius(12)
+                }
+            }
+        }
+    }
+    
+    private var selectedImagesView: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Text("Selected Images (\(viewModel.selectedImages.count))")
+                    .font(.headline)
+                
+                Spacer()
+                
+                Button("Clear All") {
+                    withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+                        viewModel.clearAllImages()
+                    }
+                }
+                .foregroundColor(.red)
+            }
+            
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 3), spacing: 8) {
+                ForEach(Array(viewModel.selectedImages.enumerated()), id: \.element.id) { index, imageModel in
+                    SelectedImageView(
+                        imageModel: imageModel,
+                        onRemove: {
+                            withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+                                viewModel.removeImage(at: index)
+                            }
+                        }
+                    )
+                    .transition(.asymmetric(
+                        insertion: .scale(scale: 0.3).combined(with: .opacity).combined(with: .slide),
+                        removal: .scale(scale: 0.5).combined(with: .opacity)
+                    ))
+                    .animation(.spring(response: 0.6, dampingFraction: 0.7).delay(Double(index) * 0.1), value: viewModel.selectedImages.count)
+                }
+            }
+            .animation(.spring(response: 0.4, dampingFraction: 0.8), value: viewModel.selectedImages.count)
+        }
+        .transition(.asymmetric(
+            insertion: .move(edge: .bottom).combined(with: .opacity),
+            removal: .move(edge: .bottom).combined(with: .opacity)
+        ))
+        .animation(.spring(response: 0.5, dampingFraction: 0.8), value: viewModel.selectedImages.count)
+    }
+    
+    private var targetFormatSelectionView: some View {
+        VStack(spacing: 16) {
+            Text("Choose Output Format")
+                .font(.headline)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Text("Select the format you want to convert your images to")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(ConversionDirection.fromAny.targetFormats) { format in
+                        CompactFormatButton(
+                            format: format,
+                            isSelected: viewModel.targetFormat == format,
+                            action: {
+                                viewModel.setTargetFormat(format)
+                            }
+                        )
+                    }
+                }
+                .padding(.horizontal, 4)
+            }
+        }
+    }
+    
+    private var conversionControlsView: some View {
+        VStack(spacing: 16) {
+            if viewModel.canUseCompressionSlider {
+                compressionQualityView
+            }
+            
+            Button(action: {
+                Task {
+                    await viewModel.convertImages()
+                }
+            }) {
+                HStack {
+                    if viewModel.isConverting {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                            .scaleEffect(0.8)
+                    } else {
+                        Image(systemName: "arrow.triangle.2.circlepath")
+                    }
+                    
+                    Text(viewModel.isConverting ? "Converting..." : "Convert to \(viewModel.targetFormat.displayName)")
+                        .fontWeight(.semibold)
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.accentColor)
+                .foregroundColor(.white)
+                .cornerRadius(12)
+            }
+            .disabled(viewModel.isConverting)
+            
+            if viewModel.isConverting {
+                ProgressView(value: viewModel.conversionProgress)
+                    .progressViewStyle(LinearProgressViewStyle())
+            }
+        }
+    }
+    
+    private var compressionQualityView: some View {
+        VStack(spacing: 12) {
+            HStack {
+                Text("Quality")
+                    .font(.subheadline)
+                
+                Spacer()
+                
+                Text("\(Int(viewModel.compressionQuality * 100))%")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            
+            Slider(value: $viewModel.compressionQuality, in: 0.1...1.0, step: 0.1)
+                .accentColor(.accentColor)
+        }
+    }
+    
     private var resultsSectionView: some View {
         VStack(spacing: 16) {
             HStack {
-                Text("JPG → \(viewModel.targetFormat.displayName) Results")
+                Text("Converted to \(viewModel.targetFormat.displayName)")
                     .font(.headline)
                     .foregroundColor(.green)
                 
                 Spacer()
                 
-                Button("View Full Results") {
-                    showResults = true
+                Button(action: {
+                    Task {
+                        await saveAllConvertedImages()
+                    }
+                }) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "square.and.arrow.down")
+                        Text("Save All")
+                    }
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 8)
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
                 }
-                .font(.subheadline)
-                .foregroundColor(.accentColor)
             }
             
-            // Show converted images with download options
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 2), spacing: 12) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 3), spacing: 8) {
                 ForEach(viewModel.selectedImages.filter { $0.convertedImage != nil }) { imageModel in
-                    ConvertedImageResultView(imageModel: imageModel, viewModel: viewModel)
+                    SimplifiedConvertedImageView(imageModel: imageModel)
+                        .transition(.asymmetric(
+                            insertion: .scale(scale: 0.8).combined(with: .opacity).combined(with: .slide),
+                            removal: .scale(scale: 0.5).combined(with: .opacity)
+                        ))
+                        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: viewModel.selectedImages.count)
                 }
             }
+            .animation(.spring(response: 0.4, dampingFraction: 0.8), value: viewModel.selectedImages.count)
             
-            // Selection info and bulk action buttons
             let convertedCount = viewModel.selectedImages.filter({ $0.convertedImage != nil }).count
             if convertedCount > 1 {
-                selectionInfo
                 bulkActionButtons
             }
         }
     }
     
-    // MARK: - Selection Info
-    private var selectionInfo: some View {
-        HStack {
-            Text("Multiple images converted")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-            
-            Spacer()
-            
-            Button("Select All") {
-                viewModel.selectAllConvertedImages()
-            }
-            .font(.caption)
-            .foregroundColor(.accentColor)
-        }
-        .padding(.horizontal)
-    }
-    
-    // MARK: - Bulk Action Buttons
     private var bulkActionButtons: some View {
         VStack(spacing: 12) {
             Text("Bulk Actions")
@@ -164,21 +430,9 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             HStack(spacing: 12) {
-                // Bulk save button
                 Button(action: {
                     Task {
-                        // Export only selected images
-                        for imageModel in viewModel.selectedImages {
-                            if viewModel.selectedForExport.contains(imageModel.id),
-                               let convertedImage = imageModel.convertedImage,
-                               let convertedFormat = imageModel.convertedFormat {
-                                if convertedFormat == .pdf {
-                                    await viewModel.exportToFiles(convertedImage, format: convertedFormat, imageModel: imageModel)
-                                } else {
-                                    await viewModel.exportToPhotos(convertedImage, format: convertedFormat)
-                                }
-                            }
-                        }
+                        await saveAllConvertedImages()
                     }
                 }) {
                     HStack(spacing: 6) {
@@ -194,14 +448,11 @@ struct ContentView: View {
                     .cornerRadius(10)
                 }
                 
-                // Bulk share button
                 Button(action: {
                     Task {
-                        // Share only selected images
                         var shareItems: [Any] = []
                         for imageModel in viewModel.selectedImages {
-                            if viewModel.selectedForExport.contains(imageModel.id),
-                               let convertedImage = imageModel.convertedImage,
+                            if let convertedImage = imageModel.convertedImage,
                                let convertedFormat = imageModel.convertedFormat {
                                 let items = await viewModel.shareImage(convertedImage, format: convertedFormat)
                                 shareItems.append(contentsOf: items)
@@ -236,503 +487,6 @@ struct ContentView: View {
         .cornerRadius(12)
     }
     
-    // MARK: - Helper Methods
-    
-    private func loadPhotosFromPicker(_ items: [PhotosPickerItem]) async {
-        var images: [UIImage] = []
-        
-        for item in items {
-            if let transferableImage = try? await item.loadTransferable(type: TransferableImage.self) {
-                let image = transferableImage.uiImage
-                print("=== Loading Image from Photos Picker ===")
-                print("Image loaded successfully using TransferableImage")
-                print("Original orientation: \(image.imageOrientation.rawValue)")
-                print("Original size: \(image.size)")
-                print("Original scale: \(image.scale)")
-                
-                // The TransferableImage preserves orientation, but we still need to normalize it
-                // for consistent display across all image types (JPG, PNG, HEIC, HDR, etc.)
-                print("=== Normalizing Image Orientation ===")
-                
-                // Check if this is an HDR image for logging purposes
-                let isHDR = image.cgImage?.colorSpace?.name == CGColorSpace.extendedLinearSRGB || 
-                            image.cgImage?.colorSpace?.name == CGColorSpace.extendedSRGB
-                print("Is HDR image: \(isHDR)")
-                
-                // Apply the simple orientation normalization
-                let correctedImage = fixImageOrientation(image)
-                
-                print("=== After Orientation Normalization ===")
-                print("Final orientation: \(correctedImage.imageOrientation.rawValue)")
-                print("Final size: \(correctedImage.size)")
-                print("Final scale: \(correctedImage.scale)")
-                print("=== End Image Loading ===\n")
-                
-                images.append(correctedImage)
-            } else {
-                print("Failed to load image using TransferableImage")
-            }
-        }
-        
-        await MainActor.run {
-            viewModel.addImagesFromPhotos(images)
-            // Clear the selection after adding images
-            selectedPhotos.removeAll()
-        }
-    }
-    
-    /// Fix image orientation by drawing it into a new context in .up orientation
-    /// This approach strips the EXIF orientation and gives you a pixel-correct image
-    private func fixImageOrientation(_ image: UIImage) -> UIImage {
-        // If the image is already in the correct orientation, return it as is
-        guard image.imageOrientation != .up else {
-            print("Image already in correct orientation (.up)")
-            return image
-        }
-        
-        print("Fixing image orientation from: \(image.imageOrientation.rawValue)")
-        print("Image size: \(image.size), scale: \(image.scale)")
-        
-        // Create a new context and draw the image - CoreGraphics will normalize the orientation
-        UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
-        image.draw(in: CGRect(origin: .zero, size: image.size))
-        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        if let corrected = normalizedImage {
-            print("Successfully normalized image orientation")
-            print("Corrected image size: \(corrected.size)")
-            print("Corrected image scale: \(corrected.scale)")
-            print("Corrected image orientation: \(corrected.imageOrientation.rawValue)")
-            return corrected
-        } else {
-            print("Failed to normalize image, returning original")
-            return image
-        }
-    }
-    
-    /// Alternative orientation fixing method using CIImage
-    private func fixImageOrientationAlternative(_ image: UIImage) -> UIImage {
-        print("=== Trying Alternative Orientation Fix ===")
-        
-        guard let cgImage = image.cgImage else {
-            print("No CGImage available, returning original")
-            return image
-        }
-        
-        let ciImage = CIImage(cgImage: cgImage)
-        let context = CIContext()
-        
-        // Create a new UIImage with the corrected orientation
-        if let correctedCGImage = context.createCGImage(ciImage, from: ciImage.extent) {
-            let correctedImage = UIImage(cgImage: correctedCGImage, scale: image.scale, orientation: .up)
-            print("Alternative method successful")
-            print("Corrected image size: \(correctedImage.size)")
-            print("Corrected image scale: \(correctedImage.scale)")
-            print("Corrected image orientation: \(correctedImage.imageOrientation.rawValue)")
-            return correctedImage
-        } else {
-            print("Alternative method failed, returning original")
-            return image
-        }
-    }
-    
-    /// Detect if an image appears to be upside down by analyzing pixel data
-    private func isImageUpsideDown(_ image: UIImage) -> Bool {
-        print("=== Analyzing Image for Upside-Down Detection ===")
-        
-        guard let cgImage = image.cgImage else {
-            print("No CGImage available for analysis")
-            return false
-        }
-        
-        // Get image dimensions
-        let width = cgImage.width
-        let height = cgImage.height
-        
-        print("Image dimensions: \(width) x \(height)")
-        print("Image orientation value: \(image.imageOrientation.rawValue)")
-        
-        // Let's try a different approach - check if the image is actually an HDR image
-        // and if it has a specific orientation that commonly causes issues
-        let isHDR = image.cgImage?.colorSpace?.name == CGColorSpace.extendedLinearSRGB || 
-                    image.cgImage?.colorSpace?.name == CGColorSpace.extendedSRGB
-        
-        if isHDR {
-            print("This is an HDR image - checking for common HDR orientation issues")
-            
-            // HDR images often have orientation 3 (left) or 6 (right) which can appear upside down
-            // Let's be more aggressive with HDR images
-            let hdrProblemOrientations = [1, 2, 3, 4, 5, 6, 7, 8] // All non-zero orientations
-            let hasHDROrientationIssue = hdrProblemOrientations.contains(image.imageOrientation.rawValue)
-            
-            print("HDR image has orientation issue: \(hasHDROrientationIssue)")
-            return hasHDROrientationIssue
-        } else {
-            // For non-HDR images, use the standard approach
-            let potentiallyUpsideDown = [3, 6, 8]
-            let isUpsideDown = potentiallyUpsideDown.contains(image.imageOrientation.rawValue)
-            
-            print("Non-HDR image potentially upside down: \(isUpsideDown)")
-            return isUpsideDown
-        }
-    }
-    
-    /// Force create a new UIImage with correct orientation by completely recreating it
-    private func forceCorrectOrientation(_ image: UIImage) -> UIImage {
-        print("=== Force Correcting Image Orientation ===")
-        
-        guard let cgImage = image.cgImage else {
-            print("No CGImage available for force correction")
-            return image
-        }
-        
-        // Get the current problematic orientation
-        let currentOrientation = image.imageOrientation
-        print("Current problematic orientation: \(currentOrientation.rawValue)")
-        
-        // Create a completely new UIImage with explicit .up orientation
-        let newImage = UIImage(cgImage: cgImage, scale: image.scale, orientation: .up)
-        
-        print("Created new image with forced .up orientation")
-        print("New image orientation: \(newImage.imageOrientation.rawValue)")
-        
-        return newImage
-    }
-    
-    /// HDR-specific orientation fixing method
-    private func fixHDRImageOrientation(_ image: UIImage) -> UIImage {
-        print("=== Trying HDR-Specific Orientation Fix ===")
-        
-        // HDR images sometimes need special handling
-        // This method tries to completely recreate the image with proper orientation
-        
-        guard let cgImage = image.cgImage else {
-            print("No CGImage available for HDR fix, returning original")
-            return image
-        }
-        
-        // Get the current orientation and size
-        let currentOrientation = image.imageOrientation
-        let size = image.size
-        let scale = image.scale
-        
-        print("HDR image - Current orientation: \(currentOrientation.rawValue)")
-        print("HDR image - Size: \(size), Scale: \(scale)")
-        
-        // Create a new graphics context
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        
-        // For HDR images, we'll try to force the correct orientation
-        // by applying the inverse transform and redrawing
-        
-        let context = UIGraphicsGetCurrentContext()
-        context?.saveGState()
-        
-        // Move to center
-        context?.translateBy(x: size.width / 2, y: size.height / 2)
-        
-        // Apply the inverse transform
-        switch currentOrientation {
-        case .down:
-            context?.rotate(by: .pi)
-        case .left:
-            context?.rotate(by: -.pi / 2)
-        case .right:
-            context?.rotate(by: .pi / 2)
-        case .upMirrored:
-            context?.scaleBy(x: -1, y: 1)
-        case .downMirrored:
-            context?.scaleBy(x: -1, y: 1)
-            context?.rotate(by: .pi)
-        case .leftMirrored:
-            context?.scaleBy(x: -1, y: 1)
-            context?.rotate(by: -.pi / 2)
-        case .rightMirrored:
-            context?.scaleBy(x: -1, y: 1)
-            context?.rotate(by: .pi / 2)
-        default:
-            break
-        }
-        
-        // Draw the image
-        let rect = CGRect(x: -size.width / 2, y: -size.height / 2, width: size.width, height: size.height)
-        context?.draw(cgImage, in: rect)
-        
-        context?.restoreGState()
-        
-        let correctedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        if let corrected = correctedImage {
-            print("HDR-specific fix successful")
-            print("Final HDR image orientation: \(corrected.imageOrientation.rawValue)")
-            return corrected
-        } else {
-            print("HDR-specific fix failed, returning original")
-            return image
-        }
-    }
-    
-    /// Aggressive orientation fixing method for stubborn HDR images
-    private func fixImageOrientationAggressive(_ image: UIImage) -> UIImage {
-        print("=== Trying Aggressive Orientation Fix ===")
-        
-        // This method tries to force the image into the correct orientation
-        // by completely recreating it with explicit transforms
-        
-        guard let cgImage = image.cgImage else {
-            print("No CGImage available for aggressive fix, returning original")
-            return image
-        }
-        
-        // Get the current orientation
-        let currentOrientation = image.imageOrientation
-        print("Current orientation for aggressive fix: \(currentOrientation.rawValue)")
-        
-        // Create a new graphics context with the correct size
-        let size = image.size
-        UIGraphicsBeginImageContextWithOptions(size, false, image.scale)
-        
-        // Apply the inverse transform to correct the orientation
-        let context = UIGraphicsGetCurrentContext()
-        context?.saveGState()
-        
-        // Move to center
-        context?.translateBy(x: size.width / 2, y: size.height / 2)
-        
-        // Apply the inverse rotation based on current orientation
-        switch currentOrientation {
-        case .down:
-            context?.rotate(by: .pi)
-        case .left:
-            context?.rotate(by: -.pi / 2)
-        case .right:
-            context?.rotate(by: .pi / 2)
-        case .upMirrored:
-            context?.scaleBy(x: -1, y: 1)
-        case .downMirrored:
-            context?.scaleBy(x: -1, y: 1)
-            context?.rotate(by: .pi)
-        case .leftMirrored:
-            context?.scaleBy(x: -1, y: 1)
-            context?.rotate(by: -.pi / 2)
-        case .rightMirrored:
-            context?.scaleBy(x: -1, y: 1)
-            context?.rotate(by: .pi / 2)
-        default:
-            break
-        }
-        
-        // Draw the image
-        let rect = CGRect(x: -size.width / 2, y: -size.height / 2, width: size.width, height: size.height)
-        context?.draw(cgImage, in: rect)
-        
-        context?.restoreGState()
-        
-        let correctedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        if let corrected = correctedImage {
-            print("Aggressive fix successful")
-            print("Final orientation: \(corrected.imageOrientation.rawValue)")
-            return corrected
-        } else {
-            print("Aggressive fix failed, returning original")
-            return image
-        }
-    }
-    
-    // MARK: - Target Format Selection View
-    private var targetFormatSelectionView: some View {
-        VStack(spacing: 16) {
-            Text("Choose Output Format")
-                .font(.headline)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Text("Select the format you want to convert your JPG images to")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            // Horizontal scrollable format selection
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    ForEach(ConversionDirection.fromJPG.targetFormats) { format in
-                        CompactFormatButton(
-                            format: format,
-                            isSelected: viewModel.targetFormat == format,
-                            action: {
-                                viewModel.setTargetFormat(format)
-                            }
-                        )
-                    }
-                }
-                .padding(.horizontal, 4)
-            }
-        }
-    }
-    
-    
-    private var imageSelectionView: some View {
-        VStack(spacing: 10) {
-            Text("Select JPG Images")
-                .font(.title2)
-                .fontWeight(.bold)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Text("Choose the JPG photos you want to convert")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            HStack(spacing: 16) {
-                PhotosPicker(
-                    selection: $selectedPhotos,
-                    maxSelectionCount: 10,
-                    matching: .images,
-                    photoLibrary: .shared() // Ensures access to all photos including HDR
-                ) {
-                    VStack(spacing: 8) {
-                        Image(systemName: "photo.on.rectangle")
-                            .font(.title2)
-                            .foregroundColor(.accentColor)
-                        
-                        Text("Photos")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color(.systemGray5))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color(.systemGray4), lineWidth: 0.5)
-                    )
-                    .cornerRadius(12)
-                }
-                
-                Button(action: {
-                    showFilesPicker = true
-                }) {
-                    VStack(spacing: 8) {
-                        Image(systemName: "folder")
-                            .font(.title2)
-                            .foregroundColor(.accentColor)
-                        
-                        Text("Files")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color(.systemGray5))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color(.systemGray4), lineWidth: 0.5)
-                    )
-                    .cornerRadius(12)
-                }
-            }
-        }
-    }
-    
-    // MARK: - Selected Images View
-    private var selectedImagesView: some View {
-        VStack(spacing: 16) {
-            HStack {
-                Text("Selected JPG Images (\(viewModel.selectedImages.count))")
-                    .font(.headline)
-                
-                Spacer()
-                
-                Button("Clear All") {
-                    viewModel.clearAllImages()
-                }
-                .foregroundColor(.red)
-            }
-            
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 2), spacing: 12) {
-                ForEach(Array(viewModel.selectedImages.enumerated()), id: \.element.id) { index, imageModel in
-                    SelectedImageView(
-                        imageModel: imageModel,
-                        onRemove: {
-                            viewModel.removeImage(at: index)
-                        }
-                    )
-                }
-            }
-        }
-    }
-    
-    // MARK: - Conversion Controls View
-    private var conversionControlsView: some View {
-        VStack(spacing: 16) {
-            // Compression Quality Slider (Pro feature)
-            if viewModel.canUseCompressionSlider {
-                compressionQualityView
-            }
-            
-            // Convert Button
-            Button(action: {
-                Task {
-                    await viewModel.convertImages()
-                    // Only show results if conversion actually succeeded and Pro sheet wasn't shown
-                    if !viewModel.showProUpgrade && !viewModel.selectedImages.isEmpty && viewModel.selectedImages.contains(where: { $0.convertedImage != nil }) {
-                        showResults = true
-                    }
-                }
-            }) {
-                HStack {
-                    if viewModel.isConverting {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                            .scaleEffect(0.8)
-                    } else {
-                        Image(systemName: "arrow.triangle.2.circlepath")
-                    }
-                    
-                    Text(viewModel.isConverting ? "Converting..." : "Convert to \(viewModel.targetFormat.displayName)")
-                        .fontWeight(.semibold)
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.accentColor)
-                .foregroundColor(.white)
-                .cornerRadius(12)
-            }
-            .disabled(viewModel.isConverting)
-            
-            // Progress Bar
-            if viewModel.isConverting {
-                ProgressView(value: viewModel.conversionProgress)
-                    .progressViewStyle(LinearProgressViewStyle())
-            }
-        }
-    }
-    
-
-    
-    // MARK: - Compression Quality View
-    private var compressionQualityView: some View {
-        VStack(spacing: 12) {
-            HStack {
-                Text("Quality")
-                    .font(.subheadline)
-                
-                Spacer()
-                
-                Text("\(Int(viewModel.compressionQuality * 100))%")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            Slider(value: $viewModel.compressionQuality, in: 0.1...1.0, step: 0.1)
-                .accentColor(.accentColor)
-        }
-    }
-    
-    // MARK: - Pro Upgrade Banner
     private var proUpgradeBanner: some View {
         VStack(spacing: 12) {
             HStack {
@@ -755,7 +509,7 @@ struct ContentView: View {
                 .cornerRadius(8)
             }
             
-            Text("Unlock batch JPG conversion, quality control, and unlimited conversions")
+            Text("Unlock batch JPEG conversion, quality control, and unlimited conversions")
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -767,6 +521,110 @@ struct ContentView: View {
                 .stroke(Color(.systemGray4), lineWidth: 0.5)
         )
         .cornerRadius(12)
+    }
+}
+
+// MARK: - Settings View
+struct SettingsView: View {
+    @StateObject private var viewModel = ImageConverterViewModel()
+    
+    var body: some View {
+        NavigationView {
+            List {
+                Section("App Info") {
+                    HStack {
+                        Image(systemName: "info.circle")
+                            .foregroundColor(.blue)
+                        Text("Version")
+                        Spacer()
+                        Text("1.0.0")
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    HStack {
+                        Image(systemName: "photo.on.rectangle")
+                            .foregroundColor(.green)
+                        Text("Supported Formats")
+                        Spacer()
+                        Text("JPEG, PNG, HEIC, TIFF, PDF")
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.trailing)
+                    }
+                }
+                
+                Section("Pro Features") {
+                    HStack {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                        Text("Pro Status")
+                        Spacer()
+                        Text(viewModel.isProUser ? "Active" : "Inactive")
+                            .foregroundColor(viewModel.isProUser ? .green : .red)
+                    }
+                    
+                    if !viewModel.isProUser {
+                        Button(action: {
+                            viewModel.requestProUpgrade()
+                        }) {
+                            HStack {
+                                Image(systemName: "star.circle.fill")
+                                    .foregroundColor(.yellow)
+                                Text("Upgrade to Pro")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                }
+                
+                Section("Support") {
+                    Button(action: {
+                        // Open support email or website
+                    }) {
+                        HStack {
+                            Image(systemName: "envelope")
+                                .foregroundColor(.blue)
+                            Text("Contact Support")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    
+                    Button(action: {
+                        // Open privacy policy
+                    }) {
+                        HStack {
+                            Image(systemName: "hand.raised")
+                                .foregroundColor(.green)
+                            Text("Privacy Policy")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    
+                    Button(action: {
+                        // Open terms of service
+                    }) {
+                        HStack {
+                            Image(systemName: "doc.text")
+                                .foregroundColor(.orange)
+                            Text("Terms of Service")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.large)
+        }
+        .sheet(isPresented: $viewModel.showProUpgrade) {
+            ProUpgradeView()
+        }
     }
 }
 
@@ -802,33 +660,30 @@ struct CompactFormatButton: View {
     
     private var formatIcon: String {
         switch format {
+        case .jpg: return "photo.fill"
         case .png: return "photo.fill"
         case .heic: return "photo.badge.plus"
         case .pdf: return "doc.text.fill"
         case .tiff: return "photo.artframe"
-        default: return "photo"
         }
     }
 }
-
-
 
 // MARK: - Selected Image View
 struct SelectedImageView: View {
     let imageModel: ImageConversionModel
     let onRemove: () -> Void
+    @State private var isPressed = false
     
     var body: some View {
         ZStack {
-            // Clean image display
             Image(uiImage: imageModel.originalImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 120)
+                .frame(width: 100, height: 100)
                 .clipped()
-                .cornerRadius(12)
+                .cornerRadius(10)
             
-            // Remove button in top right
             VStack {
                 HStack {
                     Spacer()
@@ -840,22 +695,23 @@ struct SelectedImageView: View {
                             .background(Color.black.opacity(0.6))
                             .clipShape(Circle())
                     }
+                    .scaleEffect(isPressed ? 0.9 : 1.0)
+                    .animation(.easeInOut(duration: 0.1), value: isPressed)
                 }
                 
                 Spacer()
             }
             .padding(8)
             
-            // Processing indicator (centered)
             if imageModel.isProcessing {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle(tint: .white))
                     .scaleEffect(1.2)
                     .background(Color.black.opacity(0.6))
                     .clipShape(Circle())
+                    .transition(.scale.combined(with: .opacity))
             }
             
-            // Error indicator (centered)
             if imageModel.errorMessage != nil {
                 VStack(spacing: 4) {
                     Image(systemName: "exclamationmark.triangle.fill")
@@ -868,43 +724,28 @@ struct SelectedImageView: View {
                 }
                 .background(Color.black.opacity(0.6))
                 .cornerRadius(8)
+                .transition(.scale.combined(with: .opacity))
             }
         }
-        .frame(height: 120)
+        .frame(width: 100, height: 100)
+        .scaleEffect(isPressed ? 0.98 : 1.0)
+        .animation(.easeInOut(duration: 0.1), value: isPressed)
+        .onTapGesture {
+            withAnimation(.easeInOut(duration: 0.1)) {
+                isPressed = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    isPressed = false
+                }
+            }
+        }
     }
 }
 
-// MARK: - Converted Image Result View
-struct ConvertedImageResultView: View {
+// MARK: - Simplified Converted Image View
+struct SimplifiedConvertedImageView: View {
     let imageModel: ImageConversionModel
-    let viewModel: ImageConverterViewModel
-    
-    // Computed property for selection state
-    private var isSelected: Bool {
-        viewModel.selectedForExport.contains(imageModel.id)
-    }
-    
-    // Auto-select if this is the only converted image
-    private var shouldAutoSelect: Bool {
-        let convertedCount = viewModel.selectedImages.filter { $0.convertedImage != nil }.count
-        return convertedCount == 1
-    }
-    
-    // Check if this image needs orientation correction (should be false now with proper normalization)
-    private var needsOrientationFix: Bool {
-        // With proper orientation normalization, this should always be false
-        if let convertedImage = imageModel.convertedImage {
-            let orientation = convertedImage.imageOrientation.rawValue
-            let needsFix = orientation != 0
-            if needsFix {
-                print("WARNING: Image still has non-zero orientation after normalization: \(orientation)")
-            }
-            return needsFix
-        }
-        return false
-    }
-    
-
     
     var body: some View {
         VStack(spacing: 8) {
@@ -913,199 +754,62 @@ struct ConvertedImageResultView: View {
                     Image(uiImage: convertedImage)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(height: 100)
+                        .frame(width: 100, height: 100)
                         .clipped()
                         .cornerRadius(8)
-                        .onAppear {
-                            // Log the final orientation for debugging
-                            print("Image displayed with orientation: \(convertedImage.imageOrientation.rawValue)")
-                        }
-
                 }
                 
-                // Selection indicator
                 VStack {
                     HStack {
                         Spacer()
                         
-                        Button(action: {
-                            viewModel.toggleImageSelection(imageModel.id)
-                        }) {
-                            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
-                                .font(.title2)
-                                .foregroundColor(isSelected ? .accentColor : .secondary)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                        }
+                        Text(imageModel.convertedFormat?.displayName.uppercased() ?? "")
+                            .font(.caption2)
+                            .fontWeight(.bold)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(Color.black.opacity(0.7))
+                            .foregroundColor(.white)
+                            .cornerRadius(4)
                     }
                     
                     Spacer()
                 }
-                .padding(8)
+                .padding(6)
             }
             
-            VStack(spacing: 4) {
-                Text("\(imageModel.originalFormat.displayName) → \(imageModel.convertedFormat?.displayName ?? "")")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                
-                // Action buttons
-                HStack(spacing: 8) {
-                    // Save button (Photos for images, Files for PDFs)
-                    Button(action: {
-                        Task {
-                            if let convertedImage = imageModel.convertedImage,
-                               let convertedFormat = imageModel.convertedFormat {
-                                if convertedFormat == .pdf {
-                                    await viewModel.exportToFiles(convertedImage, format: convertedFormat, imageModel: imageModel)
-                                } else {
-                                    await viewModel.exportToPhotos(convertedImage, format: convertedFormat)
-                                }
-                            }
-                        }
-                    }) {
-                        HStack(spacing: 4) {
-                            Image(systemName: imageModel.convertedFormat == .pdf ? "folder" : "photo")
-                            Text(imageModel.convertedFormat == .pdf ? "Files" : "Photos")
-                        }
-                        .font(.caption2)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(6)
-                    }
-                    
-                    // Share button
-                    Button(action: {
-                        Task {
-                            if let convertedImage = imageModel.convertedImage,
-                               let convertedFormat = imageModel.convertedFormat {
-                                let items = await viewModel.shareImage(convertedImage, format: convertedFormat)
-                                let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
-                                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                                   let window = windowScene.windows.first {
-                                    window.rootViewController?.present(activityVC, animated: true)
-                                }
-                            }
-                        }
-                    }) {
-                        HStack(spacing: 4) {
-                            Image(systemName: "square.and.arrow.up")
-                            Text("Share")
-                        }
-                        .font(.caption2)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(6)
-                    }
-                }
-            }
-        }
-        .onAppear {
-            // Auto-select if this is the only converted image
-            if shouldAutoSelect {
-                viewModel.toggleImageSelection(imageModel.id)
-            }
+            Text("\(imageModel.originalFormat.displayName) → \(imageModel.convertedFormat?.displayName ?? "")")
+                .font(.caption2)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
         }
     }
 }
 
-// MARK: - Pro Upgrade View
+// MARK: - Pro Upgrade View (Using StoreView)
 struct ProUpgradeView: View {
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var store = Store()
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 24) {
-                // Header
-                VStack(spacing: 16) {
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 60))
-                        .foregroundColor(.yellow)
-                    
-                    Text("Upgrade to Pro")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    
-                    Text("Unlock all features and convert JPG images without limits")
-                        .font(.body)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
-                }
-                
-                // Features
-                VStack(spacing: 16) {
-                    FeatureRow(icon: "photo.stack", title: "Batch JPG Conversion", description: "Convert multiple JPG images at once")
-                    FeatureRow(icon: "slider.horizontal.3", title: "Quality Control", description: "Adjust compression and quality settings")
-                    FeatureRow(icon: "infinity", title: "Unlimited Conversions", description: "No more waiting between conversions")
-                    FeatureRow(icon: "icloud.and.arrow.up", title: "Cloud Export", description: "Save directly to iCloud and other services")
-                }
-                
-                Spacer()
-                
-                // Upgrade Button
-                Button(action: {
-                    // StoreKit integration would go here
-                }) {
-                    Text("Upgrade Now - $4.99")
-                        .font(.headline)
-                        .fontWeight(.semibold)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.accentColor)
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
-                }
-                
-                Button("Restore Purchases") {
-                    // StoreKit restore would go here
-                }
-                .font(.caption)
-                .foregroundColor(.secondary)
-            }
-            .padding()
-            .navigationTitle("Pro Upgrade")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Close") {
-                        dismiss()
+            StoreView()
+                .environmentObject(store)
+                .navigationTitle("Pro Upgrade")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Close") {
+                            dismiss()
+                        }
                     }
                 }
-            }
         }
     }
 }
 
-// MARK: - Feature Row
-struct FeatureRow: View {
-    let icon: String
-    let title: String
-    let description: String
-    
-    var body: some View {
-        HStack(spacing: 16) {
-            Image(systemName: icon)
-                .font(.title2)
-                .foregroundColor(.accentColor)
-                .frame(width: 30)
-            
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(.headline)
-                
-                Text(description)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            Spacer()
-        }
-    }
-}
+
 
 #Preview {
     ContentView()
