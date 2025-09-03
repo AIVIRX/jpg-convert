@@ -55,7 +55,6 @@ struct FilesPickerView: View {
         }
     }
     
-    // MARK: - Empty State View
     private var emptyStateView: some View {
         VStack(spacing: 20) {
             Image(systemName: "folder")
@@ -89,7 +88,6 @@ struct FilesPickerView: View {
         }
     }
     
-    // MARK: - Selected Files View
     private var selectedFilesView: some View {
         VStack(spacing: 16) {
             Text("Selected Files (\(selectedURLs.count))")
@@ -109,7 +107,6 @@ struct FilesPickerView: View {
         }
     }
     
-    // MARK: - Action Buttons View
     private var actionButtonsView: some View {
         VStack(spacing: 12) {
             Button(action: {
@@ -136,15 +133,12 @@ struct FilesPickerView: View {
         }
     }
     
-    // MARK: - Helper Methods
-    
     private func removeURL(at index: Int) {
         guard index >= 0 && index < selectedURLs.count else { return }
         selectedURLs.remove(at: index)
     }
 }
 
-// MARK: - Document Picker
 struct DocumentPicker: UIViewControllerRepresentable {
     @Binding var selectedURLs: [URL]
     @Environment(\.dismiss) private var dismiss
@@ -188,7 +182,6 @@ struct DocumentPicker: UIViewControllerRepresentable {
     }
 }
 
-// MARK: - Selected File View
 struct SelectedFileView: View {
     let url: URL
     let onRemove: () -> Void

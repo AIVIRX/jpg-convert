@@ -5,15 +5,7 @@
 //  Created by Maicol Cabreja on 9/21/24.
 //
 
-//
-//  StoreView.swift
-//  CryptoProfitCalculator
-//
-//  Created by Maicol Cabreja on 9/21/24.
-//
-
 import SwiftUI
-import FirebaseAnalytics
 
 struct StoreView: View {
     @EnvironmentObject private var store: Store
@@ -35,11 +27,7 @@ struct StoreView: View {
                     store.retorePurchases()
                 })
                 .onAppear{
-                    store.loadStoredPurchases()
-                    
-                    Analytics.logEvent(AnalyticsEventScreenView,
-                    parameters: [AnalyticsParameterScreenName: "Store Page"])
-                }
+                    store.loadStoredPurchases()                }
             }
         }
         .navigationTitle("Shop")

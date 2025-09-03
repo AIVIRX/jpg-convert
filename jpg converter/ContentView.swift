@@ -48,8 +48,10 @@ struct ContentView: View {
 // MARK: - Home View
 struct HomeView: View {
     @StateObject private var viewModel = ImageConverterViewModel()
+    @EnvironmentObject private var store: Store
     @State private var showFilesPicker = false
     @State private var selectedPhotos: [PhotosPickerItem] = []
+    @State private var showProUpgrade = false
     
     var body: some View {
         NavigationStack {
@@ -100,7 +102,7 @@ struct HomeView: View {
                         }
                         
                         // Pro Upgrade Banner
-                        if !viewModel.isProUser {
+                        if store.completedPurchases.isEmpty{
                             proUpgradeBanner
                         }
                     }
@@ -112,8 +114,8 @@ struct HomeView: View {
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .sheet(isPresented: $viewModel.showProUpgrade) {
-            ProUpgradeView()
+        .sheet(isPresented: $showProUpgrade) {
+            StoreView()
         }
         .onChange(of: selectedPhotos) { oldValue, newValue in
             Task {
@@ -136,6 +138,9 @@ struct HomeView: View {
             Button("OK") { }
         } message: {
             Text(viewModel.successMessage)
+        }
+        .onAppear {
+            store.loadStoredPurchases()
         }
     }
     
@@ -321,10 +326,6 @@ struct HomeView: View {
     
     private var conversionControlsView: some View {
         VStack(spacing: 16) {
-            if viewModel.canUseCompressionSlider {
-                compressionQualityView
-            }
-            
             Button(action: {
                 Task {
                     await viewModel.convertImages()
@@ -354,24 +355,6 @@ struct HomeView: View {
                 ProgressView(value: viewModel.conversionProgress)
                     .progressViewStyle(LinearProgressViewStyle())
             }
-        }
-    }
-    
-    private var compressionQualityView: some View {
-        VStack(spacing: 12) {
-            HStack {
-                Text("Quality")
-                    .font(.subheadline)
-                
-                Spacer()
-                
-                Text("\(Int(viewModel.compressionQuality * 100))%")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            Slider(value: $viewModel.compressionQuality, in: 0.1...1.0, step: 0.1)
-                .accentColor(.accentColor)
         }
     }
     
@@ -488,147 +471,55 @@ struct HomeView: View {
     }
     
     private var proUpgradeBanner: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 16) {
             HStack {
-                Image(systemName: "star.fill")
+                Image(systemName: "crown.fill")
                     .foregroundColor(.yellow)
                 
-                Text("Upgrade to Pro")
+                Text("Unlock Premium Features")
                     .font(.headline)
+                    .fontWeight(.semibold)
                 
                 Spacer()
                 
                 Button("Upgrade") {
-                    viewModel.requestProUpgrade()
+                    showProUpgrade = true
                 }
-                .font(.caption)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(Color.accentColor)
+                .font(.subheadline)
+                .fontWeight(.medium)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background(
+                    LinearGradient(
+                        colors: [.blue, .purple],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
                 .foregroundColor(.white)
-                .cornerRadius(8)
+                .cornerRadius(12)
+                .shadow(color: .blue.opacity(0.3), radius: 4, x: 0, y: 2)
             }
             
-            Text("Unlock batch JPEG conversion, quality control, and unlimited conversions")
-                .font(.caption)
+            Text("Unlock batch conversions, quality control, and unlimited processing")
+                .font(.subheadline)
                 .foregroundColor(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .lineLimit(nil)
         }
-        .padding()
-        .background(Color(.systemGray5))
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(.systemGray4), lineWidth: 0.5)
+        .padding(20)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color(.systemGray6))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.accentColor.opacity(0.2), lineWidth: 1)
+                )
         )
-        .cornerRadius(12)
+        .cornerRadius(16)
     }
 }
 
-// MARK: - Settings View
-struct SettingsView: View {
-    @StateObject private var viewModel = ImageConverterViewModel()
-    
-    var body: some View {
-        NavigationView {
-            List {
-                Section("App Info") {
-                    HStack {
-                        Image(systemName: "info.circle")
-                            .foregroundColor(.blue)
-                        Text("Version")
-                        Spacer()
-                        Text("1.0.0")
-                            .foregroundColor(.secondary)
-                    }
-                    
-                    HStack {
-                        Image(systemName: "photo.on.rectangle")
-                            .foregroundColor(.green)
-                        Text("Supported Formats")
-                        Spacer()
-                        Text("JPEG, PNG, HEIC, TIFF, PDF")
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.trailing)
-                    }
-                }
-                
-                Section("Pro Features") {
-                    HStack {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
-                        Text("Pro Status")
-                        Spacer()
-                        Text(viewModel.isProUser ? "Active" : "Inactive")
-                            .foregroundColor(viewModel.isProUser ? .green : .red)
-                    }
-                    
-                    if !viewModel.isProUser {
-                        Button(action: {
-                            viewModel.requestProUpgrade()
-                        }) {
-                            HStack {
-                                Image(systemName: "star.circle.fill")
-                                    .foregroundColor(.yellow)
-                                Text("Upgrade to Pro")
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
-                }
-                
-                Section("Support") {
-                    Button(action: {
-                        // Open support email or website
-                    }) {
-                        HStack {
-                            Image(systemName: "envelope")
-                                .foregroundColor(.blue)
-                            Text("Contact Support")
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .foregroundColor(.secondary)
-                        }
-                    }
-                    
-                    Button(action: {
-                        // Open privacy policy
-                    }) {
-                        HStack {
-                            Image(systemName: "hand.raised")
-                                .foregroundColor(.green)
-                            Text("Privacy Policy")
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .foregroundColor(.secondary)
-                        }
-                    }
-                    
-                    Button(action: {
-                        // Open terms of service
-                    }) {
-                        HStack {
-                            Image(systemName: "doc.text")
-                                .foregroundColor(.orange)
-                            Text("Terms of Service")
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .foregroundColor(.secondary)
-                        }
-                    }
-                }
-            }
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.large)
-        }
-        .sheet(isPresented: $viewModel.showProUpgrade) {
-            ProUpgradeView()
-        }
-    }
-}
-
-// MARK: - Compact Format Button
 struct CompactFormatButton: View {
     let format: ConversionFormat
     let isSelected: Bool
@@ -669,7 +560,6 @@ struct CompactFormatButton: View {
     }
 }
 
-// MARK: - Selected Image View
 struct SelectedImageView: View {
     let imageModel: ImageConversionModel
     let onRemove: () -> Void
@@ -743,7 +633,6 @@ struct SelectedImageView: View {
     }
 }
 
-// MARK: - Simplified Converted Image View
 struct SimplifiedConvertedImageView: View {
     let imageModel: ImageConversionModel
     
@@ -785,32 +674,4 @@ struct SimplifiedConvertedImageView: View {
                 .lineLimit(2)
         }
     }
-}
-
-// MARK: - Pro Upgrade View (Using StoreView)
-struct ProUpgradeView: View {
-    @Environment(\.dismiss) private var dismiss
-    @StateObject private var store = Store()
-    
-    var body: some View {
-        NavigationView {
-            StoreView()
-                .environmentObject(store)
-                .navigationTitle("Pro Upgrade")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Close") {
-                            dismiss()
-                        }
-                    }
-                }
-        }
-    }
-}
-
-
-
-#Preview {
-    ContentView()
 }

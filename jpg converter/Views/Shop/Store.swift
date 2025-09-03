@@ -15,7 +15,7 @@ class Store: NSObject, ObservableObject{
     @Published var allRecipes  = [Recipe]()
     
     private let allProductIdentifiers = Set([
-        "com.removeads.profitloss"
+        "com.JPGConvert.Pro"
     ])
     
     var completedPurchases = [String](){
@@ -38,11 +38,14 @@ class Store: NSObject, ObservableObject{
     
     override init() {
         super.init()
+        print("🛒 Store: Initializing...")
         loadStoredPurchases()
         startObservingPaymentQueue()
         
         fetchProducts{products in
+            print("🛒 Store: Fetched \(products.count) products")
             self.allRecipes = products.map{ Recipe(product:$0)}
+            print("🛒 Store: Created \(self.allRecipes.count) recipes")
         }
     }
     
@@ -84,7 +87,7 @@ extension Store {
         buy(product) {_ in }
     }
     
-    func retorePurchases(){
+    func restorePurchases(){
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
 }
@@ -131,10 +134,12 @@ extension Store: SKProductsRequestDelegate{
         let loadedProducts = response.products
         let invalidProducts = response.invalidProductIdentifiers
         
+        print("🛒 Store: Products request received - \(loadedProducts.count) valid, \(invalidProducts.count) invalid")
+        
         guard !loadedProducts.isEmpty else{
-            print("Could not load the products!")
+            print("🛒 Store: Could not load the products!")
             if !invalidProducts.isEmpty{
-                print("Invalid products found: \(invalidProducts)")
+                print("🛒 Store: Invalid products found: \(invalidProducts)")
             }
             productsRequest = nil
             return
@@ -150,5 +155,10 @@ extension Store: SKProductsRequestDelegate{
             self.fetchCompletionHandler = nil
             self.productsRequest = nil
         }
+    }
+    
+    func request(_ request: SKRequest, didFailWithError error: Error) {
+        print("🛒 Store: Products request failed with error: \(error.localizedDescription)")
+        productsRequest = nil
     }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC065FD02E67585A009E6E11 /* StoreConfig.storekit in Resources */ = {isa = PBXBuildFile; fileRef = EC065FCF2E67585A009E6E11 /* StoreConfig.storekit */; };
 		EC065FDC2E67DE51009E6E11 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = EC065FDB2E67DE51009E6E11 /* GoogleMobileAds */; };
 		EC065FFF2E67E345009E6E11 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC065FFE2E67E345009E6E11 /* AppTrackingTransparency.framework */; };
 		EC0660022E67E3C9009E6E11 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EC0660012E67E3C9009E6E11 /* FirebaseAnalytics */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC065FCF2E67585A009E6E11 /* StoreConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreConfig.storekit; sourceTree = "<group>"; };
 		EC065FFE2E67E345009E6E11 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		EC0660072E67E457009E6E11 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EC0660092E67E466009E6E11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -64,7 +62,6 @@
 		EC20E33F2E6531D4001FF513 = {
 			isa = PBXGroup;
 			children = (
-				EC065FCF2E67585A009E6E11 /* StoreConfig.storekit */,
 				EC0660122E67F986009E6E11 /* GoogleService-Info.plist */,
 				EC20E34A2E6531D4001FF513 /* jpg converter */,
 				EC065FFD2E67E345009E6E11 /* Frameworks */,
@@ -151,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC065FD02E67585A009E6E11 /* StoreConfig.storekit in Resources */,
 				EC0660132E67F986009E6E11 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

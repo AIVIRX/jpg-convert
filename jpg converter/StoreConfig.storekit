@@ -26,7 +26,7 @@
         }
       ],
       "productID" : "com.JPGConvert.Pro",
-      "referenceName" : "JPG Converter Pro",
+      "referenceName" : "Premium",
       "type" : "NonConsumable"
     }
   ],
@@ -34,7 +34,7 @@
     "_applicationInternalID" : "6751821777",
     "_developerTeamID" : "5C778DVBP3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 778527231.63658094,
+    "_lastSynchronizedDate" : 778621720.02527297,
     "_storeKitErrors" : [
       {
         "current" : null,

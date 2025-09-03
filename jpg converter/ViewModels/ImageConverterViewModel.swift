@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import SwiftUI
+import Combine
+import PhotosUI
 
 // MARK: - Image Converter View Model
 @MainActor
@@ -16,7 +18,7 @@ class ImageConverterViewModel: ObservableObject {
     // MARK: - Published Properties
     @Published var selectedImages: [ImageConversionModel] = []
     @Published var selectedForExport: Set<UUID> = []
-    @Published var targetFormat: ConversionFormat = .png
+    @Published var targetFormat: ConversionFormat = .jpg
     @Published var compressionQuality: Float = 0.8
     @Published var isConverting = false
     @Published var conversionProgress: Float = 0.0
@@ -24,16 +26,11 @@ class ImageConverterViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var showSuccess = false
     @Published var successMessage = ""
-    @Published var showProUpgrade = false
     
     // MARK: - Services
     private let converterService = ImageConverterService()
     private let imageManager = ImageManager()
     
-    // MARK: - Properties
-    var isProUser: Bool = false // This would be managed by StoreKit in a real app
-    var canUseBatchJPGConversion: Bool { isProUser }
-    var canUseCompressionSlider: Bool { isProUser }
     
     // MARK: - Initialization
     init() {
@@ -122,8 +119,9 @@ class ImageConverterViewModel: ObservableObject {
         }
         
         // Check if user can use batch conversion
-        if selectedImages.count > 1 && !canUseBatchJPGConversion {
-            showProUpgrade = true
+        if selectedImages.count > 1 {
+            // Premium feature restriction - this will be handled by the UI
+            showError(message: "Batch conversion requires Premium. Please upgrade to unlock this feature.")
             return
         }
         
@@ -296,28 +294,4 @@ class ImageConverterViewModel: ObservableObject {
         successMessage = message
         showSuccess = true
     }
-    
-    // MARK: - Pro Features
-    
-    /// Check if user can access pro features
-    func canAccessProFeature(_ feature: ProFeature) -> Bool {
-        switch feature {
-        case .batchJPGConversion:
-            return canUseBatchJPGConversion
-        case .compressionSlider:
-            return canUseCompressionSlider
-        }
-    }
-    
-    /// Request pro upgrade
-    func requestProUpgrade() {
-        // This would integrate with StoreKit in a real app
-        showProUpgrade = true
-    }
-}
-
-// MARK: - Pro Features Enum
-enum ProFeature {
-    case batchJPGConversion
-    case compressionSlider
 }
