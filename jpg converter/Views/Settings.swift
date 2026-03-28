@@ -6,11 +6,9 @@
 //
 
 import SwiftUI
-import StoreKit
-#if os(iOS)
+import RevenueCatUI
 import MessageUI
-#endif
-#if os(iOS)
+
 struct MailView: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @Binding var result: Result<MFMailComposeResult, Error>?
@@ -50,7 +48,6 @@ struct MailView: UIViewControllerRepresentable {
 
     func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: UIViewControllerRepresentableContext<MailView>) {}
 }
-#endif
 
 struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -58,34 +55,50 @@ struct SettingsView: View {
     @EnvironmentObject private var store: Store
     @State private var errorMessage: String = ""
     @State private var showErrorAlert: Bool = false
-#if os(iOS)
+    @State private var showPaywall = false
     @State private var result: Result<MFMailComposeResult, Error>? = nil
-#endif
     @State private var isShowingMailView = false
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack {
-            VStack{
-                NavigationLink(destination: StoreView()) {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Shop")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                            Text("Unlock Premium Features")
-                                .font(.subheadline)
-                                .foregroundColor(.white)
+            Form {
+                Section {
+                    Button {
+                        showPaywall = true
+                    } label: {
+                        HStack {
+                            Image(systemName: "crown.fill")
+                                .font(.subheadline.weight(.bold))
+                                .foregroundStyle(.yellow)
+                                .frame(width: 36, height: 36)
+                                .background(Color.white.opacity(0.18))
+                                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+
+                            VStack(alignment: .leading) {
+                                Text(store.isPremium ? "Premium Active" : "Shop")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                Text(store.isPremium ? "Manage or Restore Purchases" : "Unlock Premium Features")
+                                    .font(.subheadline)
+                                    .foregroundColor(.white)
+                            }
+
+                            Spacer()
                         }
-                        .padding()
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 12)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(LinearGradient(colors: [.blue, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        )
                     }
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.indigo.gradient))
-                    .padding(.horizontal)
-                    .padding(.top)
+                    .buttonStyle(.plain)
+                    .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
+                    .listRowBackground(Color.clear)
+                    .padding(8)
                 }
-                
-                Form {
-                    Section(header: Text("Support Us")) {
+
+                Section(header: Text("Support Us")) {
                         Button {
                             requestReview()
                         } label: {
@@ -99,9 +112,9 @@ struct SettingsView: View {
                                 Text("Rate Us")
                             }
                         }
-                    }
-                    
-                    Section(header: Text("Our Apps")) {
+                }
+                
+                Section(header: Text("Our Apps")) {
                         Link(destination: URL(string: "https://apps.apple.com/us/app/crypto-profit-loss-calculator/id1638849680")!) {
                             HStack {
                                 Image("CryptoProfitCalc")
@@ -121,39 +134,39 @@ struct SettingsView: View {
                                 Text("TaskNow - Simple To Do List")
                             }
                         }
-                    }
-                    
-                    Section("Privacy & Support") {
+                }
+                
+                Section("Privacy & Support") {
                         Link(destination: URL(string: "https://www.aivirx.com/stock-profit-calculator/privacy-policy")!) {
                             Text("Privacy Policy")
+                        }
+                        Link(destination: URL(string: "https://www.aivirx.com/jpg-converter/terms-of-service")!) {
+                            Text("Terms of Service")
                         }
                         Button(action: {
                             isShowingMailView.toggle()
                         }) {
                             Text("Contact Us")
                         }
-#if os(iOS)
                         .disabled(!MFMailComposeViewController.canSendMail())
-#endif
-                    }
+
                 }
-                .accentColor(colorScheme == .dark ? .white : .black)
-#if os(iOS)
-                .navigationBarTitle("Settings")
-                .navigationBarTitleDisplayMode(.inline)
-#endif
-                .alert(isPresented: $showErrorAlert) {
-                    Alert(
-                        title: Text("Error"),
-                        message: Text(errorMessage),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
-#if os(iOS)
-                .sheet(isPresented: $isShowingMailView) {
-                    MailView(result: $result)
-                }
-#endif
+            }
+            .accentColor(colorScheme == .dark ? .white : .black)
+            .navigationBarTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $showErrorAlert) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text(errorMessage),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
+            .sheet(isPresented: $isShowingMailView) {
+                MailView(result: $result)
+            }
+            .sheet(isPresented: $showPaywall) {
+                PaywallView()
             }
         }
     }

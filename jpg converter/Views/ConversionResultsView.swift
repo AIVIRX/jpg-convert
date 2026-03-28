@@ -38,6 +38,8 @@ struct ConversionResultsView: View {
             }
             .background(Color(.systemGroupedBackground))
             .navigationBarHidden(true)
+            .navigationTitle("Image Converter")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $showShareSheet) {
@@ -45,7 +47,6 @@ struct ConversionResultsView: View {
         }
     }
     
-    // MARK: - Header View
     private var headerView: some View {
         VStack(spacing: 8) {
             HStack {
@@ -188,18 +189,11 @@ struct ConversionResultsView: View {
                         Task {
                             await viewModel.exportAllImages()
                         }
-                    }
+                    },
+                    isLoading: viewModel.isExporting
                 )
                 
-                ExportOptionButton(
-                    title: "Save All to Files",
-                    icon: "folder",
-                    action: {
-                        Task {
-                            await saveAllToFiles()
-                        }
-                    }
-                )
+
                 
                 ExportOptionButton(
                     title: "Share All Images",
@@ -251,15 +245,7 @@ struct ConversionResultsView: View {
         await shareAllImages()
     }
     
-    private func saveAllToFiles() async {
-        // Save all images to Files app
-        for imageModel in viewModel.selectedImages {
-            guard let convertedImage = imageModel.convertedImage,
-                  let convertedFormat = imageModel.convertedFormat else { continue }
-            
-            await viewModel.exportToFiles(convertedImage, format: convertedFormat, imageModel: imageModel)
-        }
-    }
+
 }
 
 // MARK: - Stat Item
@@ -428,30 +414,48 @@ struct ExportOptionButton: View {
     let title: String
     let icon: String
     let action: () -> Void
+    let isLoading: Bool
+    
+    init(title: String, icon: String, action: @escaping () -> Void, isLoading: Bool = false) {
+        self.title = title
+        self.icon = icon
+        self.action = action
+        self.isLoading = isLoading
+    }
     
     var body: some View {
         Button(action: action) {
             HStack {
-                Image(systemName: icon)
-                    .font(.title3)
-                    .foregroundColor(.accentColor)
-                    .frame(width: 24)
+                if isLoading {
+                    ProgressView()
+                        .scaleEffect(0.8)
+                        .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
+                        .frame(width: 24)
+                } else {
+                    Image(systemName: icon)
+                        .font(.title3)
+                        .foregroundColor(.accentColor)
+                        .frame(width: 24)
+                }
                 
-                Text(title)
+                Text(isLoading ? "\(title)..." : title)
                     .font(.body)
                     .foregroundColor(.primary)
                 
                 Spacer()
                 
-                Image(systemName: "chevron.right")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                if !isLoading {
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
             }
             .padding()
             .background(Color(.systemBackground))
             .cornerRadius(12)
         }
         .buttonStyle(PlainButtonStyle())
+        .disabled(isLoading)
     }
 }
 
@@ -465,8 +469,4 @@ struct ShareSheet: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
-}
-
-#Preview {
-    ConversionResultsView(isPresented: .constant(true), viewModel: ImageConverterViewModel())
 }

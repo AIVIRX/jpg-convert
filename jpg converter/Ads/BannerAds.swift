@@ -1,6 +1,6 @@
 //
 //  BannerAds.swift
-//  CryptoProfitCalculator
+//  jpg converter
 //
 //  Created by Maicol Cabreja on 11/11/23.
 //
@@ -31,31 +31,7 @@ struct AdView: UIViewRepresentable{
     func updateUIView(_ uiView: BannerView, context: UIViewRepresentableContext<AdView>) {
     }
     
-    class Coordinator: NSObject, BannerViewDelegate{
-        func bannerViewDidReceiveAd(_ bannerView: BannerView) {
-            print("bannerViewDidReceiveAd")
-        }
-        
-        func bannerView(_ bannerView: BannerView, didFailToReceiveAdWithError error: Error) {
-            print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-        }
-        
-        func bannerViewDidRecordImpression(_ bannerView: BannerView) {
-            print("bannerViewDidRecordImpression")
-        }
-        
-        func bannerViewWillPresentScreen(_ bannerView: BannerView) {
-            print("bannerViewWillPresentScreen")
-        }
-        
-        func bannerViewWillDismissScreen(_ bannerView: BannerView) {
-            print("bannerViewWillDIsmissScreen")
-        }
-        
-        func bannerViewDidDismissScreen(_ bannerView: BannerView) {
-            print("bannerViewDidDismissScreen")
-        }
-    }
+    class Coordinator: NSObject, BannerViewDelegate {}
 }
 
 extension UIApplication{
@@ -70,4 +46,3 @@ extension UIApplication{
         return root
     }
 }
-

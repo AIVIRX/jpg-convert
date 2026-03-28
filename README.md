@@ -1,20 +1,19 @@
 # JPG Converter – Convert to & from JPG
 
-A complete iOS app built with SwiftUI that allows users to convert images between various formats including JPG, PNG, HEIC, PDF, and TIFF.
+A complete iOS app built with SwiftUI that allows users to convert images between various formats including JPG, PNG, HEIC, and TIFF.
 
 ## Features
 
 ### Core Features
-- **Convert to JPG**: Convert any supported image format (PNG, HEIC, TIFF, PDF) to JPG
-- **Convert from JPG**: Convert JPG images to PNG, HEIC, and PDF formats
-- **Multiple Input Sources**: Select images from Photo Library and Files app
-- **Batch Conversion**: Convert multiple images at once (Pro feature)
+- **Convert to JPG**: Convert any supported image format (PNG, HEIC, TIFF) to JPG
+- **Convert from JPG**: Convert JPG images to PNG, HEIC, and TIFF formats
+- **Photo Library Integration**: Select images directly from your Photo Library
+- **Batch Conversion**: Convert up to 9 images at once
 - **Quality Control**: Adjust JPG compression quality for size/quality tradeoff (Pro feature)
 - **Offline Operation**: All conversions happen locally using Core Graphics and Image I/O APIs
 
 ### Export Options
 - Save converted images to Photos library
-- Export to Files app
 - Share via iOS share sheet
 - Support for all major image formats
 
@@ -26,7 +25,7 @@ A complete iOS app built with SwiftUI that allows users to convert images betwee
 
 ### Freemium Model
 - **Free Tier**: Single image conversion, basic features
-- **Pro Tier**: Batch conversion, compression slider, unlimited conversions
+- **Pro Tier**: Compression slider, unlimited conversions, remove ads
 
 ## Technical Architecture
 
@@ -45,7 +44,7 @@ A complete iOS app built with SwiftUI that allows users to convert images betwee
 - Progress tracking for batch operations
 
 #### ImageManager
-- Manages image selection from Photos and Files
+- Manages image selection from Photos
 - Handles export operations
 - Photo library permissions management
 - File format detection
@@ -53,12 +52,11 @@ A complete iOS app built with SwiftUI that allows users to convert images betwee
 #### Views
 - `ContentView`: Main app interface
 - `PhotosPickerView`: Photo library selection
-- `FilesPickerView`: File system selection
 - `ConversionResultsView`: Results display and export
 
 ### Supported Formats
-- **Input**: JPG, PNG, HEIC, TIFF, PDF
-- **Output**: JPG, PNG, HEIC, PDF, TIFF
+- **Input**: JPG, PNG, HEIC, TIFF
+- **Output**: JPG, PNG, HEIC, TIFF
 - **Quality**: Adjustable compression (0.1 - 1.0)
 
 ## Setup Instructions
@@ -77,7 +75,6 @@ A complete iOS app built with SwiftUI that allows users to convert images betwee
 ### Required Permissions
 The app requires the following permissions:
 - **Photo Library Access**: For selecting and saving images
-- **Files Access**: For importing/exporting files
 
 ### Configuration
 - Update bundle identifier in project settings
@@ -97,7 +94,6 @@ jpg converter/
 │   └── ImageManager.swift
 ├── Views/
 │   ├── PhotosPickerView.swift
-│   ├── FilesPickerView.swift
 │   └── ConversionResultsView.swift
 ├── Shortcuts/
 │   └── ShortcutsIntent.swift
@@ -114,7 +110,7 @@ jpg converter/
 ### Basic Conversion
 1. Launch the app
 2. Choose conversion direction (to/from JPG)
-3. Select images from Photos or Files
+3. Select images from Photos
 4. Adjust quality settings (Pro users)
 5. Tap "Convert Images"
 6. Export or share results

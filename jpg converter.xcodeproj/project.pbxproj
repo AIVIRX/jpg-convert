@@ -14,6 +14,8 @@
 		EC0660082E67E458009E6E11 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0660072E67E457009E6E11 /* AdSupport.framework */; };
 		EC06600A2E67E467009E6E11 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0660092E67E466009E6E11 /* StoreKit.framework */; };
 		EC0660132E67F986009E6E11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0660122E67F986009E6E11 /* GoogleService-Info.plist */; };
+		EC3B94572F76F5EE0018B65F /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = EC3B94562F76F5EE0018B65F /* RevenueCat */; };
+		EC3B94592F76F5EE0018B65F /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = EC3B94582F76F5EE0018B65F /* RevenueCatUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,9 @@
 			files = (
 				EC0660062E67E3C9009E6E11 /* FirebaseCore in Frameworks */,
 				EC0660082E67E458009E6E11 /* AdSupport.framework in Frameworks */,
+				EC3B94572F76F5EE0018B65F /* RevenueCat in Frameworks */,
 				EC065FDC2E67DE51009E6E11 /* GoogleMobileAds in Frameworks */,
+				EC3B94592F76F5EE0018B65F /* RevenueCatUI in Frameworks */,
 				EC06600A2E67E467009E6E11 /* StoreKit.framework in Frameworks */,
 				EC065FFF2E67E345009E6E11 /* AppTrackingTransparency.framework in Frameworks */,
 				EC0660022E67E3C9009E6E11 /* FirebaseAnalytics in Frameworks */,
@@ -100,6 +104,8 @@
 				EC065FDB2E67DE51009E6E11 /* GoogleMobileAds */,
 				EC0660012E67E3C9009E6E11 /* FirebaseAnalytics */,
 				EC0660052E67E3C9009E6E11 /* FirebaseCore */,
+				EC3B94562F76F5EE0018B65F /* RevenueCat */,
+				EC3B94582F76F5EE0018B65F /* RevenueCatUI */,
 			);
 			productName = "jpg converter";
 			productReference = EC20E3482E6531D4001FF513 /* jpg converter.app */;
@@ -113,7 +119,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					EC20E3472E6531D4001FF513 = {
 						CreatedOnToolsVersion = 16.4;
@@ -126,12 +132,53 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				bn,
+				bg,
+				ca,
+				"zh-HK",
+				"zh-Hans",
+				"zh-Hant",
+				hr,
+				cs,
+				da,
+				nl,
+				"en-AU",
+				"en-IN",
+				"en-GB",
+				fi,
+				fr,
+				"fr-CA",
+				de,
+				el,
+				he,
+				hi,
+				it,
+				ja,
+				ko,
+				hu,
+				ms,
+				ru,
+				"es-419",
+				es,
+				"es-US",
+				vi,
+				uk,
+				th,
+				sv,
+				sk,
+				"pt-BR",
+				"pt-PT",
+				id,
+				tr,
+				nb,
 			);
 			mainGroup = EC20E33F2E6531D4001FF513;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EC065FDA2E67DE51009E6E11 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				EC0660002E67E3C9009E6E11 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EC3B94552F76F5EE0018B65F /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EC20E3492E6531D4001FF513 /* Products */;
@@ -170,6 +217,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -224,7 +272,9 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -234,6 +284,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -281,7 +332,9 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -292,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 67;
 				DEVELOPMENT_TEAM = 5C778DVBP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -305,14 +358,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Maicol.jpg-converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -332,7 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 67;
 				DEVELOPMENT_TEAM = 5C778DVBP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -345,14 +398,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Maicol.jpg-converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -406,6 +459,14 @@
 				minimumVersion = 12.2.0;
 			};
 		};
+		EC3B94552F76F5EE0018B65F /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.67.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -423,6 +484,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC0660002E67E3C9009E6E11 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCore;
+		};
+		EC3B94562F76F5EE0018B65F /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC3B94552F76F5EE0018B65F /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		EC3B94582F76F5EE0018B65F /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC3B94552F76F5EE0018B65F /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCatUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

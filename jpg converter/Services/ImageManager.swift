@@ -60,29 +60,6 @@ class ImageManager: ObservableObject {
         }
     }
     
-    /// Add images from Files picker
-    func addImagesFromFiles(_ urls: [URL]) {
-        for url in urls {
-            if let image = UIImage(contentsOfFile: url.path) {
-                // Check if the file is actually a JPG
-                let format = detectImageFormat(from: url)
-                if format == .jpg {
-                    print("Loaded JPG from Files - Original orientation: \(image.imageOrientation.rawValue)")
-                    // Fix image orientation before adding
-                    let correctedImage = fixImageOrientation(image)
-                    let imageModel = ImageConversionModel(
-                        originalImage: correctedImage,
-                        originalFormat: .jpg,
-                        compressionQuality: 0.8
-                    )
-                    selectedImages.append(imageModel)
-                } else {
-                    // Could show an alert that only JPG files are supported
-                    print("Skipping non-JPG file: \(url.lastPathComponent)")
-                }
-            }
-        }
-    }
     
     /// Remove image at specific index
     func removeImage(at index: Int) {
@@ -135,8 +112,7 @@ class ImageManager: ObservableObject {
             return .png
         case "heic", "heif":
             return .heic
-        case "pdf":
-            return .pdf
+
         case "tiff", "tif":
             return .tiff
         default:
@@ -152,9 +128,7 @@ class ImageManager: ObservableObject {
         if image.imageOrientation == .up {
             return image
         }
-        
-        print("Fixing image orientation from: \(image.imageOrientation.rawValue)")
-        
+
         // Create a new CGImage with the correct orientation
         UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
         
@@ -196,14 +170,7 @@ class ImageManager: ObservableObject {
         
         let correctedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
-        if correctedImage != nil {
-            print("Successfully fixed image orientation")
-        } else {
-            print("Failed to fix image orientation, using original")
-        }
-        
-        
+
         return correctedImage ?? image
     }
     
@@ -231,12 +198,7 @@ class ImageManager: ObservableObject {
         
         let data = try await getImageData(image, format: format)
         
-        // For PDFs, we need to handle them differently
-        if format == .pdf {
-            try await savePDFToPhotos(data)
-        } else {
-            try await saveImageToPhotos(data)
-        }
+        try await saveImageToPhotos(data)
     }
     
     /// Save image data to Photos
@@ -247,52 +209,9 @@ class ImageManager: ObservableObject {
         }
     }
     
-    /// Save PDF data to Photos (as a document)
-    private func savePDFToPhotos(_ data: Data) async throws {
-        // Create a temporary file for the PDF
-        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent("converted_document.pdf")
-        try data.write(to: tempURL)
-        
-        // For PDFs, we'll try to save it as a photo asset first
-        // Note: iOS Photos app doesn't handle PDFs well, so this may not work consistently
-        do {
-            try await PHPhotoLibrary.shared().performChanges {
-                let request = PHAssetCreationRequest.forAsset()
-                request.addResource(with: .photo, data: data, options: nil)
-            }
-            
-            // If we get here, it was saved successfully
-            // However, the user may not see it properly in Photos
-            print("PDF saved to Photos successfully, but may not display properly")
-            
-        } catch {
-            // If saving as photo fails, throw a more specific error for PDFs
-            print("Failed to save PDF to Photos: \(error.localizedDescription)")
-            throw ExportError.pdfSaveNotSupported
-        }
-    }
+
     
-    /// Export converted image to Files
-    func exportToFiles(_ image: UIImage, format: ConversionFormat) async throws -> URL {
-        let data = try await getImageData(image, format: format)
-        
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileName = "converted_image_\(Date().timeIntervalSince1970).\(format.fileExtension)"
-        let fileURL = documentsDirectory.appendingPathComponent(fileName)
-        
-        try data.write(to: fileURL)
-        return fileURL
-    }
-    
-    /// Export PDF data directly to Files (for multi-page PDFs)
-    func exportPDFDataToFiles(_ pdfData: Data) async throws -> URL {
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileName = "multi_page_pdf_\(Date().timeIntervalSince1970).pdf"
-        let fileURL = documentsDirectory.appendingPathComponent(fileName)
-        
-        try pdfData.write(to: fileURL)
-        return fileURL
-    }
+
     
     /// Get image data for specified format
     private func getImageData(_ image: UIImage, format: ConversionFormat) async throws -> Data {
@@ -315,22 +234,7 @@ class ImageManager: ObservableObject {
                 throw ExportError.failedToGetImageData
             }
             return data
-        case .pdf:
-            // For PDF, we need to create the actual PDF data
-            let pdfData = try await createPDFData(from: correctedImage)
-            
-            // Validate that we actually got PDF data
-            guard pdfData.count > 0 else {
-                throw ExportError.failedToGetImageData
-            }
-            
-            // Check if the data starts with PDF signature
-            let pdfHeader = pdfData.prefix(4)
-            if pdfHeader != "%PDF".data(using: .ascii) {
-                print("Warning: Generated data doesn't have PDF header")
-            }
-            
-            return pdfData
+
         case .tiff:
             guard let cgImage = correctedImage.cgImage else {
                 throw ExportError.failedToGetImageData
@@ -343,38 +247,7 @@ class ImageManager: ObservableObject {
         }
     }
     
-    /// Create PDF data from image
-    private func createPDFData(from image: UIImage) async throws -> Data {
-        let pdfData = NSMutableData()
-        let pdfConsumer = CGDataConsumer(data: pdfData as CFMutableData)!
-        
-        // Ensure the image size is reasonable for PDF
-        var mediaBox = CGRect(origin: .zero, size: image.size)
-        
-        // If image is too large, scale it down to reasonable PDF dimensions
-        let maxDimension: CGFloat = 2000
-        if mediaBox.width > maxDimension || mediaBox.height > maxDimension {
-            let scale = min(maxDimension / mediaBox.width, maxDimension / mediaBox.height)
-            mediaBox.size = CGSize(width: mediaBox.width * scale, height: mediaBox.height * scale)
-        }
-        
-        guard let pdfContext = CGContext(consumer: pdfConsumer, mediaBox: &mediaBox, nil) else {
-            throw ExportError.failedToGetImageData
-        }
-        
-        pdfContext.beginPage(mediaBox: &mediaBox)
-        
-        if let cgImage = image.cgImage {
-            // Draw the image centered in the media box
-            let imageRect = AVMakeRect(aspectRatio: image.size, insideRect: mediaBox)
-            pdfContext.draw(cgImage, in: imageRect)
-        }
-        
-        pdfContext.endPage()
-        pdfContext.closePDF()
-        
-        return pdfData as Data
-    }
+
     
     /// Share image using UIActivityViewController
     func shareImage(_ image: UIImage, format: ConversionFormat) async throws -> [Any] {
@@ -421,7 +294,7 @@ enum ExportError: LocalizedError {
     case failedToGetImageData
     case failedToSave
     case permissionDenied
-    case pdfSaveNotSupported
+
     
     var errorDescription: String? {
         switch self {
@@ -433,8 +306,7 @@ enum ExportError: LocalizedError {
             return "Failed to save image"
         case .permissionDenied:
             return "Photo Library access was denied"
-        case .pdfSaveNotSupported:
-            return "PDFs cannot be saved directly to Photos"
+
         }
     }
     
@@ -445,11 +317,10 @@ enum ExportError: LocalizedError {
         case .failedToGetImageData:
             return "Try converting the image again"
         case .failedToSave:
-            return "Try using the Files option instead"
+            return "Try converting the image again"
         case .permissionDenied:
             return "Go to Settings > Privacy & Security > Photos and enable access for JPG Converter"
-        case .pdfSaveNotSupported:
-            return "Use the Files option to save PDFs, or convert to an image format first"
+
         }
     }
 }

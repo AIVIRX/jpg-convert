@@ -10,6 +10,7 @@ import AppTrackingTransparency
 import GoogleMobileAds
 import AdSupport
 import FirebaseCore
+import RevenueCat
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
@@ -20,12 +21,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                     switch status {
                     case .authorized:
                         MobileAds.shared.start(completionHandler: nil)
-                        print(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
                     case .denied:
                         MobileAds.shared.start(completionHandler: nil)
-                        print(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
                     default:
-                        print("DEFAULT TRACKING")
+                        MobileAds.shared.start(completionHandler: nil)
                     }
                 }
             } else {
@@ -34,6 +33,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         })
         
         FirebaseApp.configure()
+
+        Purchases.logLevel = .debug
+        Purchases.configure(withAPIKey: "appl_IuMwmKGqRoNoMXPZgpmOYjFakFP")
         
         return true
     }
@@ -47,16 +49,17 @@ struct jpg_converterApp: App {
     var body: some Scene {
         WindowGroup {
             VStack{
-                if !store.completedPurchases.isEmpty{
+                if store.isPremium {
+                    // IAP bought
                 } else {
                     if UIDevice.current.userInterfaceIdiom == .phone {
-                        AdView(adUnitID: AdUnitID.finalAds)
+                        AdView(adUnitID: AdUnitID.banner)
                             .frame(width: 320, height: 50)
                             .padding(5)
                     }
                     
                     if UIDevice.current.userInterfaceIdiom == .pad {
-                        AdView(adUnitID: AdUnitID.finalAds)
+                        AdView(adUnitID: AdUnitID.banner)
                             .frame(width: 468, height: 60)
                             .padding(5)
                     }

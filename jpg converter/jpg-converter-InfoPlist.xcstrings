@@ -1,0 +1,788 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Bundle display name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "JPG Convert"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "jpg converter"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "NSPhotoLibraryAddUsageDescription" : {
+      "comment" : "Privacy - Photo Library Additions Usage Description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحتاج هذا التطبيق إلى إذن لحفظ الصور المحولة إلى مكتبة الصور الخاصة بك."
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Това приложение се нуждае от разрешение, за да запазва конвертираните изображения във вашата фото библиотека."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "আপনার ফটো লাইব্রেরিতে রূপান্তরিত ছবি সংরক্ষণ করার জন্য এই অ্যাপটির অনুমতি প্রয়োজন।"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aquesta aplicació necessita permís per desar les imatges convertides a la teva fototeca."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tato aplikace potřebuje oprávnění k ukládání převedených obrázků do vaší knihovny fotografií."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne app skal have tilladelse til at gemme konverterede billeder i dit fotobibliotek."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese App benötigt die Berechtigung, konvertierte Bilder in Ihrer Fotobibliothek zu speichern."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αυτή η εφαρμογή χρειάζεται άδεια για να αποθηκεύσει εικόνες που έχουν μετατραπεί στη Βιβλιοθήκη φωτογραφιών σας."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This app needs permission to save converted images to your Photo Library."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app needs permission to save converted images to your Photo Library."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app needs permission to save converted images to your Photo Library."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app needs permission to save converted images to your Photo Library."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicación necesita permiso para guardar las imágenes convertidas en su biblioteca de fotos."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicación necesita permiso para guardar las imágenes convertidas en su biblioteca de fotos."
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicación necesita permiso para guardar las imágenes convertidas en su biblioteca de fotos."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tämä sovellus tarvitsee luvan tallentaakseen muunnetut kuvat valokuvakirjastoosi."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette application a besoin d'une autorisation pour enregistrer les images converties dans votre photothèque."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette application a besoin d'une autorisation pour enregistrer les images converties dans votre photothèque."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפליקציה זו זקוקה להרשאה כדי לשמור תמונות שהומרו בספריית התמונות שלך."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इस ऐप को परिवर्तित छवियों को आपकी फोटो लाइब्रेरी में सहेजने के लिए अनुमति की आवश्यकता है।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ovoj aplikaciji je potrebno dopuštenje za spremanje pretvorenih slika u vašu biblioteku fotografija."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ennek az alkalmazásnak engedélyre van szüksége a konvertált képek mentéséhez a fotókönyvtárba."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasi ini memerlukan izin untuk menyimpan gambar yang dikonversi ke Perpustakaan Foto Anda."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questa app necessita dell'autorizzazione per salvare le immagini convertite nella tua Libreria Foto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このアプリには、変換した画像をフォトライブラリに保存する権限が必要です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱은 변환된 이미지를 사진 라이브러리에 저장하려면 권한이 필요합니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apl ini memerlukan kebenaran untuk menyimpan imej yang ditukar ke Pustaka Foto anda."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne appen trenger tillatelse for å lagre konverterte bilder i bildebiblioteket ditt."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze app heeft toestemming nodig om geconverteerde afbeeldingen op te slaan in uw fotobibliotheek."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este aplicativo precisa de permissão para salvar imagens convertidas na sua Biblioteca de Fotos."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicação necessita de permissão para guardar imagens convertidas na sua Biblioteca de Fotografias."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этому приложению требуется разрешение на сохранение преобразованных изображений в вашей фотобиблиотеке."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Táto aplikácia potrebuje povolenie na ukladanie konvertovaných obrázkov do vašej knižnice fotografií."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Den här appen behöver behörighet för att spara konverterade bilder i ditt fotobibliotek."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอปนี้ต้องได้รับอนุญาตจึงจะบันทึกรูปภาพที่แปลงแล้วลงในคลังภาพของคุณได้"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu uygulamanın dönüştürülen görüntüleri Fotoğraf Kitaplığınıza kaydetmesi için izne ihtiyacı var."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цій програмі потрібен дозвіл на збереження конвертованих зображень у вашій фотобібліотеці."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng này cần có quyền để lưu hình ảnh đã chuyển đổi vào Thư viện ảnh của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此应用程序需要权限才能将转换后的图像保存到您的照片库。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此應用程式需要權限才能將轉換後的圖像儲存到您的照片庫。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此應用程式需要權限才能將轉換後的圖像儲存到您的照片庫。"
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription" : {
+      "comment" : "Privacy - Photo Library Usage Description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحتاج هذا التطبيق إلى الوصول إلى مكتبة الصور الخاصة بك لحفظ الصور المحولة."
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Това приложение се нуждае от достъп до вашата фото библиотека, за да запазва конвертираните изображения."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "রূপান্তরিত ছবি সংরক্ষণ করতে এই অ্যাপটির আপনার ফটো লাইব্রেরিতে অ্যাক্সেস প্রয়োজন।"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aquesta aplicació necessita accés a la teva fototeca per desar les imatges convertides."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tato aplikace potřebuje přístup k vaší knihovně fotografií, aby mohla ukládat převedené obrázky."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne app skal have adgang til dit fotobibliotek for at gemme konverterede billeder."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese App benötigt Zugriff auf Ihre Fotobibliothek, um konvertierte Bilder zu speichern."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αυτή η εφαρμογή χρειάζεται πρόσβαση στη Βιβλιοθήκη φωτογραφιών σας για να αποθηκεύσει εικόνες που έχουν μετατραπεί."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This app needs access to your Photo Library to save converted images."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app needs access to your Photo Library to save converted images."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app needs access to your Photo Library to save converted images."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This app needs access to your Photo Library to save converted images."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicación necesita acceso a su biblioteca de fotos para guardar las imágenes convertidas."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicación necesita acceso a su biblioteca de fotos para guardar las imágenes convertidas."
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicación necesita acceso a su biblioteca de fotos para guardar las imágenes convertidas."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tämä sovellus tarvitsee pääsyn valokuvakirjastoosi tallentaakseen muunnetut kuvat."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette application a besoin d'accéder à votre photothèque pour enregistrer les images converties."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette application a besoin d'accéder à votre bibliothèque d'images pour sauvegarder les images converties."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפליקציה זו זקוקה לגישה לספריית התמונות שלך כדי לשמור תמונות שהומרו."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "परिवर्तित छवियों को सहेजने के लिए इस ऐप को आपकी फोटो लाइब्रेरी तक पहुंच की आवश्यकता है।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ova aplikacija treba pristup vašoj fotogaleriji kako bi spremila pretvorene slike."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ennek az alkalmazásnak hozzáférésre van szüksége a fotókönyvtárhoz a konvertált képek mentéséhez."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasi ini memerlukan akses ke Perpustakaan Foto Anda untuk menyimpan gambar yang dikonversi."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questa app necessita dell'accesso alla tua libreria fotografica per salvare le immagini convertite."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変換した画像を保存するには、このアプリがフォトライブラリにアクセスする必要があります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱은 변환된 이미지를 저장하기 위해 사진 라이브러리에 액세스해야 합니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apl ini memerlukan akses kepada Pustaka Foto anda untuk menyimpan imej yang ditukar."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne appen trenger tilgang til bildebiblioteket ditt for å lagre konverterte bilder."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze app heeft toegang tot uw fotobibliotheek nodig om geconverteerde afbeeldingen op te slaan."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este aplicativo precisa acessar sua Biblioteca de Fotos para salvar imagens convertidas."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta aplicação precisa de aceder à sua Biblioteca de Fotos para guardar imagens convertidas."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для сохранения преобразованных изображений этому приложению необходим доступ к вашей фотобиблиотеке."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Táto aplikácia potrebuje prístup k vašej knižnici fotografií na uloženie konvertovaných obrázkov."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Den här appen behöver åtkomst till ditt fotobibliotek för att spara konverterade bilder."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอปนี้ต้องเข้าถึงคลังภาพของคุณเพื่อบันทึกรูปภาพที่แปลงแล้ว"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu uygulamanın dönüştürülen görüntüleri kaydedebilmesi için Fotoğraf Kitaplığınıza erişmesi gerekiyor."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цьому додатку потрібен доступ до вашої фотобібліотеки, щоб зберігати конвертовані зображення."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng này cần truy cập vào Thư viện ảnh của bạn để lưu hình ảnh đã chuyển đổi."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此应用程序需要访问您的照片库来保存转换后的图像。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此應用程式需要存取您的照片庫來保存轉換後的影像。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此應用程式需要存取您的照片庫來保存轉換後的影像。"
+          }
+        }
+      }
+    },
+    "NSUserTrackingUsageDescription" : {
+      "comment" : "Privacy - Tracking Usage Description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيتم استخدام هذا المعرف لتقديم إعلانات مخصصة لك."
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Този идентификатор ще бъде използван, за да ви бъдат показвани персонализирани реклами."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "এই শনাক্তকারীটি আপনার কাছে ব্যক্তিগতকৃত বিজ্ঞাপন সরবরাহ করতে ব্যবহৃত হবে।"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aquest identificador s'utilitzarà per mostrar-vos anuncis personalitzats."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tento identifikátor bude použit k zobrazování personalizovaných reklam."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne identifikator vil blive brugt til at levere personligt tilpassede annoncer til dig."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Kennung wird verwendet, um Ihnen personalisierte Werbung zu liefern."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αυτό το αναγνωριστικό θα χρησιμοποιηθεί για την προβολή εξατομικευμένων διαφημίσεων σε εσάς."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This identifier will be used to deliver personalized ads to you."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This identifier will be used to deliver personalized ads to you."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This identifier will be used to deliver personalized ads to you."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This identifier will be used to deliver personalized ads to you."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este identificador se utilizará para enviarle anuncios personalizados."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este identificador se utilizará para enviarle anuncios personalizados."
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este identificador se utilizará para enviarle anuncios personalizados."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tätä tunnistetta käytetään personoitujen mainosten näyttämiseen sinulle."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cet identifiant sera utilisé pour vous proposer des publicités personnalisées."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cet identifiant sera utilisé pour vous proposer des publicités personnalisées."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מזהה זה ישמש כדי לספק לך מודעות מותאמות אישית."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इस पहचानकर्ता का उपयोग आपको वैयक्तिकृत विज्ञापन दिखाने के लिए किया जाएगा."
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ovaj identifikator će se koristiti za prikazivanje personaliziranih oglasa."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ezt az azonosítót arra használjuk, hogy személyre szabott hirdetéseket jelenítsünk meg Önnek."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengenal ini akan digunakan untuk menayangkan iklan yang dipersonalisasi kepada Anda."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo identificatore verrà utilizzato per inviarti annunci pubblicitari personalizzati."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この識別子は、パーソナライズされた広告を配信するために使用されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 식별자는 귀하에게 개인화된 광고를 제공하는 데 사용됩니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengecam ini akan digunakan untuk menghantar iklan yang diperibadikan kepada anda."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne identifikatoren vil bli brukt til å levere personlig tilpassede annonser til deg."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze identificatie wordt gebruikt om u gepersonaliseerde advertenties te tonen."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este identificador será usado para lhe enviar anúncios personalizados."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este identificador será utilizado para lhe enviar anúncios personalizados."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Этот идентификатор будет использоваться для показа вам персонализированной рекламы."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tento identifikátor sa použije na zobrazovanie prispôsobených reklám."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denna identifierare kommer att användas för att leverera personligt anpassade annonser till dig."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวระบุนี้จะใช้เพื่อส่งโฆษณาส่วนบุคคลให้กับคุณ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu tanımlayıcı size kişiselleştirilmiş reklamlar sunmak için kullanılacaktır."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цей ідентифікатор буде використано для показу вам персоналізованої реклами."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mã định danh này sẽ được sử dụng để gửi quảng cáo được cá nhân hóa tới bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "该标识符将用于向您投放个性化广告。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "該標識符將用於向您投放個人化廣告。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "該標識符將用於向您投放個人化廣告。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

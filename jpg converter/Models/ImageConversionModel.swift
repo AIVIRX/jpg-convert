@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-// MARK: - Image Conversion Model
 struct ImageConversionModel: Identifiable, Equatable {
     let id = UUID()
     let originalImage: UIImage
@@ -18,9 +17,6 @@ struct ImageConversionModel: Identifiable, Equatable {
     var compressionQuality: Float
     var isProcessing: Bool = false
     var errorMessage: String?
-    
-    // Store PDF data for multi-page PDFs
-    var pdfData: Data?
     
     // Computed properties
     var originalSize: Int {
@@ -44,12 +40,10 @@ struct ImageConversionModel: Identifiable, Equatable {
     }
 }
 
-// MARK: - Conversion Format Enum
 enum ConversionFormat: String, CaseIterable, Identifiable {
     case jpg = "JPG"
     case png = "PNG"
     case heic = "HEIC"
-    case pdf = "PDF"
     case tiff = "TIFF"
     
     var id: String { rawValue }
@@ -59,7 +53,6 @@ enum ConversionFormat: String, CaseIterable, Identifiable {
         case .jpg: return "jpg"
         case .png: return "png"
         case .heic: return "heic"
-        case .pdf: return "pdf"
         case .tiff: return "tiff"
         }
     }
@@ -69,7 +62,6 @@ enum ConversionFormat: String, CaseIterable, Identifiable {
         case .jpg: return "image/jpeg"
         case .png: return "image/png"
         case .heic: return "image/heic"
-        case .pdf: return "application/pdf"
         case .tiff: return "image/tiff"
         }
     }
@@ -79,7 +71,6 @@ enum ConversionFormat: String, CaseIterable, Identifiable {
         case .jpg: return "JPEG"
         case .png: return "PNG"
         case .heic: return "HEIC"
-        case .pdf: return "PDF"
         case .tiff: return "TIFF"
         }
     }
@@ -89,7 +80,6 @@ enum ConversionFormat: String, CaseIterable, Identifiable {
         case .jpg: return "Universal format"
         case .png: return "Transparency support"
         case .heic: return "Smaller file size"
-        case .pdf: return "Document format"
         case .tiff: return "High quality"
         }
     }
@@ -97,12 +87,11 @@ enum ConversionFormat: String, CaseIterable, Identifiable {
     var isLossy: Bool {
         switch self {
         case .jpg: return true
-        case .png, .heic, .pdf, .tiff: return false
+        case .png, .heic, .tiff: return false
         }
     }
 }
 
-// MARK: - Conversion Direction
 enum ConversionDirection {
     case fromAny
     
@@ -111,7 +100,7 @@ enum ConversionDirection {
     }
     
     var description: String {
-        return "Convert your JPEG photos to PNG, HEIC, PDF, and more"
+        return "Convert your JPEG photos to PNG, HEIC, TIFF, and more"
     }
     
     var sourceFormats: [ConversionFormat] {
@@ -119,6 +108,6 @@ enum ConversionDirection {
     }
     
     var targetFormats: [ConversionFormat] {
-        return [.jpg, .png, .heic, .pdf, .tiff] // Include JPG as a target option
+        return [.jpg, .png, .heic, .tiff] // Include JPG as a target option
     }
 }
