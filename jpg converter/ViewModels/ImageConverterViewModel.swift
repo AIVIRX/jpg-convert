@@ -14,8 +14,6 @@ import PhotosUI
 // MARK: - Image Converter View Model
 @MainActor
 class ImageConverterViewModel: ObservableObject {
-    private static let interstitialFrequency = 2
-    
     // MARK: - Published Properties
     @Published var selectedImages: [ImageConversionModel] = []
     @Published var selectedForExport: Set<UUID> = []
@@ -29,13 +27,11 @@ class ImageConverterViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var showSuccess = false
     @Published var successMessage = ""
-    @Published var shouldShowInterstitial = false
     
     // MARK: - Services
     private let converterService = ImageConverterService()
     private let imageManager = ImageManager()
     private var conversionGeneration = UUID()
-    @AppStorage("successfulConversionCount") private var successfulConversionCount = 0
     
     // MARK: - Store Reference
     var store: Store?
@@ -85,7 +81,6 @@ class ImageConverterViewModel: ObservableObject {
         selectedImages.removeAll()
         imageManager.clearAllImages()
         selectedForExport.removeAll()
-        shouldShowInterstitial = false
     }
     
     // MARK: - Export Selection Management
@@ -175,12 +170,6 @@ class ImageConverterViewModel: ObservableObject {
                 let formatName = targetFormat.displayName
                 let count = successfulConversions.count
                 showSuccess(message: "Successfully converted \(count) JPG image\(count == 1 ? "" : "s") to \(formatName)")
-                
-                // Show interstitial ad after successful conversion (only for non-premium users)
-                if !(store?.isPremium ?? false) {
-                    successfulConversionCount += 1
-                    shouldShowInterstitial = successfulConversionCount.isMultiple(of: Self.interstitialFrequency)
-                }
             } else if successfulConversions.isEmpty {
                 // All conversions failed
                 showError(message: "All conversions failed. Please try again.")

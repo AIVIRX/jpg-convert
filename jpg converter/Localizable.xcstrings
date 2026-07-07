@@ -51,10 +51,22 @@
             "value" : "%@"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%@"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -135,6 +147,12 @@
             "value" : "%@"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -148,6 +166,12 @@
           }
         },
         "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "lt" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -171,6 +195,12 @@
             "value" : "%@"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -181,6 +211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -225,6 +261,12 @@
             "value" : "%@"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -232,12 +274,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -307,6 +343,12 @@
             "value" : "%1$@ → %2$@"
           }
         },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -385,6 +427,12 @@
             "value" : "%1$@ → %2$@"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ → %2$@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -398,6 +446,12 @@
           }
         },
         "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ → %2$@"
+          }
+        },
+        "lt" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ → %2$@"
@@ -421,6 +475,12 @@
             "value" : "%1$@ → %2$@"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -431,6 +491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ → %2$@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -475,6 +541,12 @@
             "value" : "%1$@ → %2$@"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ → %2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -482,12 +554,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ → %2$@"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ → %2$@"
@@ -555,6 +621,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld image%2$@ converted"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -635,6 +707,12 @@
             "value" : "Gambar %1$lld%2$@ dikonversi"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld gambar%2$@ dikonversi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -651,6 +729,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld 이미지%2$@ 변환됨"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld vaizdas%2$@ konvertuotas"
           }
         },
         "ms" : {
@@ -671,6 +755,12 @@
             "value" : "%1$lld afbeelding%2$@ geconverteerd"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -681,6 +771,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld imagem%2$@ convertida"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -725,6 +821,12 @@
             "value" : "%1$lld image%2$@ đã chuyển đổi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld 影像%2$@已轉換"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -732,12 +834,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld 影像%2$@已轉換"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld 影像%2$@已轉換"
@@ -795,10 +891,22 @@
             "value" : "Όλες οι εικόνες έχουν μετατραπεί με επιτυχία"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "All images have been successfully converted"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "All images have been successfully converted"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -879,6 +987,12 @@
             "value" : "Semua gambar telah berhasil dikonversi"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semua gambar telah berhasil dikonversi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -895,6 +1009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모든 이미지가 성공적으로 변환되었습니다."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visi vaizdai sėkmingai konvertuoti"
           }
         },
         "ms" : {
@@ -915,6 +1035,12 @@
             "value" : "Alle afbeeldingen zijn succesvol geconverteerd"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -925,6 +1051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Todas as imagens foram convertidas com sucesso"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -969,6 +1101,12 @@
             "value" : "Tất cả hình ảnh đã được chuyển đổi thành công"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有影像已成功轉換"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -979,256 +1117,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "所有影像已成功轉換"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "所有影像已成功轉換"
-          }
-        }
-      }
-    },
-    "Choose how you want to save your converted images" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "اختر الطريقة التي تريد حفظ الصور المحولة بها"
-          }
-        },
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Изберете как искате да запазите конвертираните изображения"
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "আপনার রূপান্তরিত ছবিগুলি কীভাবে সংরক্ষণ করতে চান তা চয়ন করুন।"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trieu com voleu desar les imatges convertides"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyberte, jak chcete uložit převedené obrázky"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vælg hvordan du vil gemme dine konverterede billeder"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wählen Sie, wie Sie Ihre konvertierten Bilder speichern möchten"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Επιλέξτε πώς θέλετε να αποθηκεύσετε τις εικόνες που έχετε μετατρέψει"
-          }
-        },
-        "en-AU" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose how you want to save your converted images"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose how you want to save your converted images"
-          }
-        },
-        "en-IN" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose how you want to save your converted images"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige cómo quieres guardar tus imágenes convertidas"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige cómo quieres guardar tus imágenes convertidas"
-          }
-        },
-        "es-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige cómo quieres guardar tus imágenes convertidas"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Valitse, miten haluat tallentaa muunnetut kuvat"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choisissez comment vous souhaitez enregistrer vos images converties"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choisissez comment enregistrer vos images converties"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "בחר כיצד ברצונך לשמור את התמונות שהומרו"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "चुनें कि आप अपनी परिवर्तित छवियों को कैसे सहेजना चाहते हैं"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odaberite kako želite spremiti pretvorene slike"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Válassza ki, hogyan szeretné menteni a konvertált képeket"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pilih bagaimana Anda ingin menyimpan gambar yang dikonversi"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scegli come vuoi salvare le immagini convertite"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "変換した画像を保存する方法を選択します"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "변환된 이미지를 저장할 방법을 선택하세요"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pilih cara anda mahu menyimpan imej anda yang ditukar"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Velg hvordan du vil lagre de konverterte bildene dine"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kies hoe u uw geconverteerde afbeeldingen wilt opslaan"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolha como você deseja salvar suas imagens convertidas"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolha como pretende guardar as suas imagens convertidas"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выберите, как вы хотите сохранить преобразованные изображения."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyberte, ako chcete uložiť konvertované obrázky"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Välj hur du vill spara dina konverterade bilder"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "เลือกวิธีที่คุณต้องการบันทึกรูปภาพที่แปลงแล้วของคุณ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dönüştürülen resimlerinizi nasıl kaydetmek istediğinizi seçin"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Виберіть, як ви хочете зберегти конвертовані зображення"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chọn cách bạn muốn lưu hình ảnh đã chuyển đổi của mình"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "选择如何保存转换后的图像"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇如何儲存轉換後的影像"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇如何儲存轉換後的影像"
           }
         }
       }
@@ -1283,10 +1171,22 @@
             "value" : "Επιλέξτε μορφή εξόδου"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Choose Output Format"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose Output Format"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -1367,6 +1267,12 @@
             "value" : "Pilih Format Output"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih Format Output"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1383,6 +1289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "출력 형식 선택"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasirinkite išvesties formatą"
           }
         },
         "ms" : {
@@ -1403,6 +1315,12 @@
             "value" : "Kies uitvoerformaat"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1413,6 +1331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Escolha o formato de saída"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -1457,6 +1381,12 @@
             "value" : "Chọn Định dạng Đầu ra"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇輸出格式"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1468,11 +1398,285 @@
             "state" : "translated",
             "value" : "選擇輸出格式"
           }
+        }
+      }
+    },
+    "Choose how you want to save your converted images" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر الطريقة التي تريد حفظ الصور المحولة بها"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изберете как искате да запазите конвертираните изображения"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "আপনার রূপান্তরিত ছবিগুলি কীভাবে সংরক্ষণ করতে চান তা চয়ন করুন।"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trieu com voleu desar les imatges convertides"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte, jak chcete uložit převedené obrázky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg hvordan du vil gemme dine konverterede billeder"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie, wie Sie Ihre konvertierten Bilder speichern möchten"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επιλέξτε πώς θέλετε να αποθηκεύσετε τις εικόνες που έχετε μετατρέψει"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Choose how you want to save your converted images"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose how you want to save your converted images"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose how you want to save your converted images"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose how you want to save your converted images"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige cómo quieres guardar tus imágenes convertidas"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige cómo quieres guardar tus imágenes convertidas"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige cómo quieres guardar tus imágenes convertidas"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse, miten haluat tallentaa muunnetut kuvat"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez comment vous souhaitez enregistrer vos images converties"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez comment enregistrer vos images converties"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בחר כיצד ברצונך לשמור את התמונות שהומרו"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "चुनें कि आप अपनी परिवर्तित छवियों को कैसे सहेजना चाहते हैं"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odaberite kako želite spremiti pretvorene slike"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Válassza ki, hogyan szeretné menteni a konvertált képeket"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih bagaimana Anda ingin menyimpan gambar yang dikonversi"
+          }
+        },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih cara Anda ingin menyimpan gambar yang telah dikonversi"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli come vuoi salvare le immagini convertite"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変換した画像を保存する方法を選択します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "변환된 이미지를 저장할 방법을 선택하세요"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasirinkite, kaip norite išsaugoti konvertuotus vaizdus"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih cara anda mahu menyimpan imej anda yang ditukar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg hvordan du vil lagre de konverterte bildene dine"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies hoe u uw geconverteerde afbeeldingen wilt opslaan"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha como você deseja salvar suas imagens convertidas"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha como pretende guardar as suas imagens convertidas"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите, как вы хотите сохранить преобразованные изображения."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte, ako chcete uložiť konvertované obrázky"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj hur du vill spara dina konverterade bilder"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกวิธีที่คุณต้องการบันทึกรูปภาพที่แปลงแล้วของคุณ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dönüştürülen resimlerinizi nasıl kaydetmek istediğinizi seçin"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виберіть, як ви хочете зберегти конвертовані зображення"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chọn cách bạn muốn lưu hình ảnh đã chuyển đổi của mình"
+          }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "選擇輸出格式"
+            "value" : "選擇如何儲存轉換後的影像"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择如何保存转换后的图像"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇如何儲存轉換後的影像"
           }
         }
       }
@@ -1527,10 +1731,22 @@
             "value" : "Διαγραφή όλων"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Clear All"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clear All"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -1611,6 +1827,12 @@
             "value" : "Bersihkan"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bersihkan Semua"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1627,6 +1849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모두 지우기"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Išvalyti viską"
           }
         },
         "ms" : {
@@ -1647,6 +1875,12 @@
             "value" : "Wis alles"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1657,6 +1891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Limpar tudo"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -1701,6 +1941,12 @@
             "value" : "Xóa tất cả"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部清除"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1711,12 +1957,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "清除全部"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全部清除"
           }
         }
       }
@@ -1771,10 +2011,22 @@
             "value" : "Επικοινωνήστε μαζί μας"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Contact Us"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contact Us"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -1855,6 +2107,12 @@
             "value" : "Hubungi kami"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hubungi Kami"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1871,6 +2129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "문의하기"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Susisiekite"
           }
         },
         "ms" : {
@@ -1891,6 +2155,12 @@
             "value" : "Neem contact met ons op"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1901,6 +2171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contate-nos"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -1945,6 +2221,12 @@
             "value" : "Liên hệ với chúng tôi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聯絡我們"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1952,12 +2234,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "聯絡我們"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "聯絡我們"
@@ -2015,10 +2291,22 @@
             "value" : "Η μετατροπή ολοκληρώθηκε"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Conversion Complete"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conversion Complete"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -2099,6 +2387,12 @@
             "value" : "Konversi Selesai"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konversi Selesai"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2115,6 +2409,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "변환 완료"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertavimas baigtas"
           }
         },
         "ms" : {
@@ -2135,6 +2435,12 @@
             "value" : "Conversie voltooid"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2145,6 +2451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conversão concluída"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -2189,6 +2501,12 @@
             "value" : "Chuyển đổi hoàn tất"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轉換完成"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2196,12 +2514,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "轉換完成"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "轉換完成"
@@ -2259,10 +2571,22 @@
             "value" : "Αποτελέσματα Μετατροπών"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Conversion Results"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conversion Results"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -2343,6 +2667,12 @@
             "value" : "Hasil Konversi"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hasil Konversi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2359,6 +2689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "변환 결과"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertavimo rezultatai"
           }
         },
         "ms" : {
@@ -2379,6 +2715,12 @@
             "value" : "Conversieresultaten"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2389,6 +2731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resultados de conversão"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -2433,6 +2781,12 @@
             "value" : "Kết quả chuyển đổi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轉換結果"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2440,12 +2794,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "轉換結果"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "轉換結果"
@@ -2503,10 +2851,22 @@
             "value" : "Μετατροπή σε %@"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Convert to %@"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Convert to %@"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -2587,6 +2947,12 @@
             "value" : "Konversi ke %@"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konversi ke %@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2603,6 +2969,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@로 변환"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertuota į %@"
           }
         },
         "ms" : {
@@ -2623,6 +2995,12 @@
             "value" : "Converteren naar %@"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2633,6 +3011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Converter para %@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -2677,6 +3061,12 @@
             "value" : "Chuyển đổi sang %@"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轉換為 %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2684,12 +3074,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "轉換為 %@"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "轉換為 %@"
@@ -2747,10 +3131,22 @@
             "value" : "Μετατρεπόμενες εικόνες"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Converted Images"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Converted Images"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -2831,6 +3227,12 @@
             "value" : "Gambar yang Dikonversi"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gambar Dikonversi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2847,6 +3249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "변환된 이미지"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertuoti vaizdai"
           }
         },
         "ms" : {
@@ -2867,6 +3275,12 @@
             "value" : "Geconverteerde afbeeldingen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2877,6 +3291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Imagens convertidas"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -2921,6 +3341,12 @@
             "value" : "Hình ảnh đã chuyển đổi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轉換後的影像"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2928,12 +3354,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "轉換後的影像"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "轉換後的影像"
@@ -2991,10 +3411,22 @@
             "value" : "Μετατράπηκε σε %@"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Converted to %@"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Converted to %@"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -3075,6 +3507,12 @@
             "value" : "Dikonversi ke %@"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dikonversi ke %@"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3091,6 +3529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@로 변환됨"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertuota į %@"
           }
         },
         "ms" : {
@@ -3111,6 +3555,12 @@
             "value" : "Omgerekend naar %@"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3121,6 +3571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Convertido para %@"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -3165,6 +3621,12 @@
             "value" : "Đã chuyển đổi thành %@"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轉換為 %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3172,12 +3634,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "轉換為 %@"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "轉換為 %@"
@@ -3235,10 +3691,22 @@
             "value" : "Μετατροπή..."
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Converting..."
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Converting..."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -3319,6 +3787,12 @@
             "value" : "Mengonversi..."
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mengonversi..."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3335,6 +3809,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "변환 중..."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertuojama..."
           }
         },
         "ms" : {
@@ -3355,6 +3835,12 @@
             "value" : "Converteren..."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3365,6 +3851,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Convertendo..."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -3409,6 +3901,12 @@
             "value" : "Đang chuyển đổi..."
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在轉換..."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3416,12 +3914,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正在轉換..."
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在轉換..."
@@ -3479,10 +3971,22 @@
             "value" : "Υπολογιστής Κέρδους και Ζημίας Κρυπτονομισμάτων"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Crypto Profit Loss Calculator"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Crypto Profit Loss Calculator"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -3563,6 +4067,12 @@
             "value" : "Kalkulator Untung Rugi Kripto"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalkulator Laba Rugi Crypto"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3579,6 +4089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "암호화폐 손익 계산기"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kripto pelno ir nuostolių skaičiuoklė"
           }
         },
         "ms" : {
@@ -3599,6 +4115,12 @@
             "value" : "Crypto winst-verliescalculator"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3609,6 +4131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calculadora de Lucros e Perdas com Criptomoedas"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -3653,6 +4181,12 @@
             "value" : "Máy tính lãi lỗ tiền điện tử"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加密貨幣盈虧計算器"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3660,12 +4194,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "加密貨幣盈虧計算器"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "加密貨幣盈虧計算器"
@@ -3723,10 +4251,22 @@
             "value" : "Λήψη"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Download"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Download"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -3807,6 +4347,12 @@
             "value" : "Unduh"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unduh"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3823,6 +4369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다운로드"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atsisiųsti"
           }
         },
         "ms" : {
@@ -3843,6 +4395,12 @@
             "value" : "Download"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3853,6 +4411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descarregar"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -3897,6 +4461,12 @@
             "value" : "Tải về"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下載"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3904,12 +4474,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "下載"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "下載"
@@ -3967,10 +4531,22 @@
             "value" : "Λήψη & Εξαγωγή"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Download & Export"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Download & Export"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -4051,6 +4627,12 @@
             "value" : "Unduh & Ekspor"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unduh & Ekspor"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4067,6 +4649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다운로드 및 내보내기"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atsisiųsti ir eksportuoti"
           }
         },
         "ms" : {
@@ -4087,6 +4675,12 @@
             "value" : "Downloaden en exporteren"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4097,6 +4691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descarregar e exportar"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -4141,6 +4741,12 @@
             "value" : "Tải xuống & Xuất"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下載和匯出"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4148,12 +4754,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "下載和匯出"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "下載和匯出"
@@ -4211,10 +4811,22 @@
             "value" : "Σφάλμα"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Error"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -4295,6 +4907,12 @@
             "value" : "Kesalahan"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kesalahan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4311,6 +4929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "오류"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klaida"
           }
         },
         "ms" : {
@@ -4331,6 +4955,12 @@
             "value" : "Fout"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4341,6 +4971,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erro"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -4385,6 +5021,12 @@
             "value" : "Lỗi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "錯誤"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4392,12 +5034,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "錯誤"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "錯誤"
@@ -4455,10 +5091,22 @@
             "value" : "Εξαγωγή εικόνων..."
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Exporting images..."
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Exporting images..."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -4539,6 +5187,12 @@
             "value" : "Mengekspor gambar..."
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mengekspor gambar..."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4555,6 +5209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이미지를 내보내는 중..."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eksportuojami vaizdai..."
           }
         },
         "ms" : {
@@ -4575,6 +5235,12 @@
             "value" : "Afbeeldingen exporteren..."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4585,6 +5251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Exportar imagens..."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -4629,6 +5301,12 @@
             "value" : "Đang xuất hình ảnh..."
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在導出圖像..."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4636,12 +5314,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正在導出圖像..."
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在導出圖像..."
@@ -4699,10 +5371,22 @@
             "value" : "Απέτυχε"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Failed"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Failed"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -4783,6 +5467,12 @@
             "value" : "Gagal"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gagal"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4799,6 +5489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "실패"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nepavyko"
           }
         },
         "ms" : {
@@ -4819,6 +5515,12 @@
             "value" : "Mislukt"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4829,6 +5531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Falhou"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -4873,6 +5581,12 @@
             "value" : "Thất bại"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "失敗"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4884,17 +5598,8 @@
             "state" : "translated",
             "value" : "失敗的"
           }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "失敗"
-          }
         }
       }
-    },
-    "Free: 1 photo at a time" : {
-
     },
     "Home" : {
       "localizations" : {
@@ -4946,10 +5651,22 @@
             "value" : "Οικία"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Home"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Home"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -5030,6 +5747,12 @@
             "value" : "Rumah"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rumah"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5046,6 +5769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "홈"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namai"
           }
         },
         "ms" : {
@@ -5066,6 +5795,12 @@
             "value" : "Woning"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5076,6 +5811,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Casa"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -5120,6 +5861,12 @@
             "value" : "Nhà"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "家居"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5131,17 +5878,288 @@
             "state" : "translated",
             "value" : "家"
           }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "家居"
-          }
         }
       }
     },
     "Image Converter" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محول الصور"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конвертор на изображения"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ছবি রূপান্তরক"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertidor d'imatges"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Převodník obrázků"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billedkonverter"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildkonverter"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μετατροπέας Εικόνων"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Image Converter"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image Converter"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image Converter"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image Converter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conversor de imágenes"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertidor de imágenes"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertidor de Imágenes"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuvamuunnin"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertisseur d'images"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertisseur d'images"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ממיר תמונות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "छवि परिवर्तक"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pretvarač slika"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Képátalakító"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengonversi Gambar"
+          }
+        },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konverter Gambar"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertitore di immagini"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画像変換"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이미지 변환기"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaizdų keitiklis"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penukar Imej"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildekonverterer"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afbeeldingsconverter"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conversor de Imagem"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conversor de Imagens"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конвертер изображений"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertor obrázkov"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildkonverterare"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวแปลงภาพ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görüntü Dönüştürücü"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конвертер зображень"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuyển đổi hình ảnh"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圖片轉換器"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图片转换器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "影像轉換器"
+          }
+        }
+      }
     },
     "JPG Converter" : {
       "localizations" : {
@@ -5193,10 +6211,22 @@
             "value" : "Μετατροπέας JPG"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "JPG Converter"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "JPG Converter"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -5277,6 +6307,12 @@
             "value" : "Konverter JPG"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konverter JPG"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5293,6 +6329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "JPG 변환기"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JPG keitiklis"
           }
         },
         "ms" : {
@@ -5313,6 +6355,12 @@
             "value" : "JPG-converter"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5323,6 +6371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conversor JPG"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -5367,6 +6421,12 @@
             "value" : "Bộ chuyển đổi JPG"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JPG轉換器"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5378,17 +6438,288 @@
             "state" : "translated",
             "value" : "JPG轉換器"
           }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "JPG轉換器"
-          }
         }
       }
     },
     "Manage or Restore Purchases" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إدارة أو استعادة المشتريات"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление или възстановяване на покупки"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ক্রয়গুলি পরিচালনা বা পুনরুদ্ধার করুন"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestiona o restableix compres"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spravovat nebo obnovit nákupy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrer eller gendan køb"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einkäufe verwalten oder wiederherstellen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαχείριση ή Επαναφορά Αγορών"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Manage or Restore Purchases"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage or Restore Purchases"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage or Restore Purchases"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage or Restore Purchases"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestionar o restaurar compras"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestionar o restaurar compras"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrar o Restaurar Compras"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallitse tai palauta ostot"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gérer ou restaurer les achats"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gérer ou restaurer les achats"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נהל או שחזר רכישות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "खरीदों को प्रबंधित या पुनर्स्थापित करें"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravljaj ili obnovi kupnje"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vásárlások kezelése vagy visszaállítása"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelola atau Pulihkan Pembelian"
+          }
+        },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelola atau Pulihkan Pembelian"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestisci o ripristina acquisti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "購入の管理・復元"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구매 관리 또는 복원"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tvarkyti arba atkurti pirkimus"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Urus atau Pulihkan Pembelian"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrer eller gjenopprett kjøp"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aankopen beheren of herstellen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerenciar ou Restaurar Compras"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerir ou Restaurar Compras"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление и восстановление покупок"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spravovať alebo obnoviť nákupy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hantera eller återställ köp"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จัดการหรือกู้คืนการซื้อ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satın Alımları Yönet veya Geri Yükle"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Керувати або відновити покупки"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quản lý hoặc khôi phục mua hàng"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理或恢復購買項目"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理或恢复购买"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理或恢復購買"
+          }
+        }
+      }
     },
     "No Images Selected" : {
       "localizations" : {
@@ -5440,10 +6771,22 @@
             "value" : "Δεν έχουν επιλεγεί εικόνες"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No Images Selected"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No Images Selected"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -5524,6 +6867,12 @@
             "value" : "Tidak Ada Gambar yang Dipilih"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak Ada Gambar yang Dipilih"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5540,6 +6889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선택된 이미지가 없습니다"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nepasirinkta vaizdų"
           }
         },
         "ms" : {
@@ -5560,6 +6915,12 @@
             "value" : "Geen afbeeldingen geselecteerd"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5570,6 +6931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nenhuma imagem selecionada"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -5614,6 +6981,12 @@
             "value" : "Không có hình ảnh nào được chọn"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未選擇影像"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5621,12 +6994,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "未選擇影像"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "未選擇影像"
@@ -5684,10 +7051,22 @@
             "value" : "ΟΚ"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "OK"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -5768,6 +7147,12 @@
             "value" : "OKE"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OKE"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5784,6 +7169,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "확인"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerai"
           }
         },
         "ms" : {
@@ -5804,6 +7195,12 @@
             "value" : "OK"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5814,6 +7211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -5858,6 +7261,12 @@
             "value" : "OK"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5868,12 +7277,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "好的"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "好"
           }
         }
       }
@@ -5928,10 +7331,22 @@
             "value" : "Οι εφαρμογές μας"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Our Apps"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Our Apps"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -6012,6 +7427,12 @@
             "value" : "Aplikasi Kami"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasi Kami"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6028,6 +7449,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "우리의 앱"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mūsų programos"
           }
         },
         "ms" : {
@@ -6048,6 +7475,12 @@
             "value" : "Onze apps"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6058,6 +7491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Os nossos aplicativos"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -6102,6 +7541,12 @@
             "value" : "Ứng dụng của chúng tôi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我們的應用程式"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6113,20 +7558,288 @@
             "state" : "translated",
             "value" : "我們的應用程式"
           }
+        }
+      }
+    },
+    "Premium Active" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المميز مفعل"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Премиум активен"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "প্রিমিয়াম সক্রিয়"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium actiu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prémiové předplatné aktivní"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium aktiv"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium aktiv"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium ενεργό"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Premium Active"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Active"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Active"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Active"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium activo"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium activo"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Activo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium käytössä"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium actif"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium actif"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרימיום פעיל"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रीमियम सक्रिय"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium aktivno"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prémium aktív"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Aktif"
+          }
+        },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Aktif"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium attivo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プレミアム有効中"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리미엄 활성화됨"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium aktyvuota"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Aktif"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium aktiv"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium actief"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Ativo"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium ativo"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Премиум активен"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prémiový účet aktívny"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium aktiv"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พรีเมียมใช้งานอยู่"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Aktif"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Преміум активний"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium đang hoạt động"
+          }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我們的應用程式"
+            "value" : "高級版已啟用"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高级版已激活"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高級版已啟用"
           }
         }
       }
-    },
-    "Pick up to 15 at a time" : {
-
-    },
-    "Premium Active" : {
-
     },
     "Privacy & Support" : {
       "localizations" : {
@@ -6178,10 +7891,22 @@
             "value" : "Απόρρητο και Υποστήριξη"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Privacy & Support"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacy & Support"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -6262,6 +7987,12 @@
             "value" : "Privasi & Dukungan"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privasi & Dukungan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6278,6 +8009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "개인정보 보호 및 지원"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privatumas ir palaikymas"
           }
         },
         "ms" : {
@@ -6298,6 +8035,12 @@
             "value" : "Privacy en ondersteuning"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6308,6 +8051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacidade e Suporte"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -6352,6 +8101,12 @@
             "value" : "Quyền riêng tư và Hỗ trợ"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱私與支持"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6359,12 +8114,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "隱私與支持"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "隱私與支持"
@@ -6422,10 +8171,22 @@
             "value" : "Πολιτική απορρήτου"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Privacy Policy"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacy Policy"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -6506,6 +8267,12 @@
             "value" : "Kebijakan Privasi"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kebijakan Privasi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6522,6 +8289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "개인정보 처리방침"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privatumo politika"
           }
         },
         "ms" : {
@@ -6542,6 +8315,12 @@
             "value" : "Privacybeleid"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6552,6 +8331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Política de Privacidade"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -6596,6 +8381,12 @@
             "value" : "Chính sách quyền riêng tư"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "私隱政策"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6606,12 +8397,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "隱私權政策"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "私隱政策"
           }
         }
       }
@@ -6666,10 +8451,22 @@
             "value" : "Αξιολογήστε μας"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Rate Us"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rate Us"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -6750,6 +8547,12 @@
             "value" : "Nilai Kami"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beri Rating Kami"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6766,6 +8569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "우리를 평가해주세요"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Įvertinkite mus"
           }
         },
         "ms" : {
@@ -6786,6 +8595,12 @@
             "value" : "Beoordeel ons"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6796,6 +8611,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avalie-nos"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -6840,6 +8661,12 @@
             "value" : "Đánh giá chúng tôi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "評價我們"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6847,12 +8674,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "評價我們"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "評價我們"
@@ -6910,10 +8731,22 @@
             "value" : "Αποθήκευση όλων"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Save All"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save All"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -6994,6 +8827,12 @@
             "value" : "Simpan Semua"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan Semua"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7010,6 +8849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모두 저장"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Išsaugoti viską"
           }
         },
         "ms" : {
@@ -7030,6 +8875,12 @@
             "value" : "Alles opslaan"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7040,6 +8891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardar tudo"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -7084,6 +8941,12 @@
             "value" : "Lưu tất cả"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部保存"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7091,12 +8954,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全部保存"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "全部保存"
@@ -7154,10 +9011,22 @@
             "value" : "Οικονομία..."
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Saving..."
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saving..."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -7238,6 +9107,12 @@
             "value" : "Penghematan..."
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menyimpan..."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7254,6 +9129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "절약..."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Išsaugoma..."
           }
         },
         "ms" : {
@@ -7274,6 +9155,12 @@
             "value" : "Besparing..."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7284,6 +9171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salvando..."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -7328,6 +9221,12 @@
             "value" : "Đang lưu..."
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存..."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7335,12 +9234,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "儲存..."
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "儲存..."
@@ -7398,10 +9291,22 @@
             "value" : "Επιλογή εικόνων για μετατροπή"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Select Images to Convert"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select Images to Convert"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -7482,6 +9387,12 @@
             "value" : "Pilih Gambar untuk Dikonversi"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih Gambar untuk Dikonversi"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7498,6 +9409,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "변환할 이미지 선택"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasirinkite vaizdus konvertavimui"
           }
         },
         "ms" : {
@@ -7518,6 +9435,12 @@
             "value" : "Selecteer afbeeldingen om te converteren"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7528,6 +9451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecione Imagens para Converter"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -7572,6 +9501,12 @@
             "value" : "Chọn hình ảnh để chuyển đổi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇要轉換的影像"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7579,12 +9514,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇要轉換的影像"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇要轉換的影像"
@@ -7642,10 +9571,22 @@
             "value" : "Επιλογή φωτογραφιών"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Select Photos"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select Photos"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -7726,6 +9667,12 @@
             "value" : "Pilih Foto"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih Foto"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7742,6 +9689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사진 선택"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasirinkti nuotraukas"
           }
         },
         "ms" : {
@@ -7762,6 +9715,12 @@
             "value" : "Selecteer foto's"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7772,6 +9731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotografias"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -7816,6 +9781,12 @@
             "value" : "Chọn Ảnh"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇相片"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7826,12 +9797,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇照片"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇相片"
           }
         }
       }
@@ -7886,10 +9851,22 @@
             "value" : "Επιλέξτε τη μορφή στην οποία θέλετε να μετατρέψετε τις εικόνες σας"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Select the format you want to convert your images to"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select the format you want to convert your images to"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -7970,6 +9947,12 @@
             "value" : "Pilih format yang ingin Anda ubah gambarnya"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih format yang ingin digunakan untuk mengonversi gambar Anda"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7986,6 +9969,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이미지를 변환할 형식을 선택하세요"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasirinkite formatą, į kurį norite konvertuoti vaizdus"
           }
         },
         "ms" : {
@@ -8006,6 +9995,12 @@
             "value" : "Selecteer het formaat waarnaar u uw afbeeldingen wilt converteren"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8016,6 +10011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecione o formato para o qual pretende converter as suas imagens"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -8060,6 +10061,12 @@
             "value" : "Chọn định dạng bạn muốn chuyển đổi hình ảnh của mình sang"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇要將影像轉換為的格式"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8067,12 +10074,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇要將影像轉換為的格式"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇要將影像轉換為的格式"
@@ -8130,10 +10131,22 @@
             "value" : "Επιλεγμένες εικόνες (%lld)"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Selected Images (%lld)"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selected Images (%lld)"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -8214,6 +10227,12 @@
             "value" : "Gambar Pilihan (%lld)"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gambar Terpilih (%lld)"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8230,6 +10249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선택한 이미지(%lld)"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasirinkti vaizdai (%lld)"
           }
         },
         "ms" : {
@@ -8250,6 +10275,12 @@
             "value" : "Geselecteerde afbeeldingen (%lld)"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8260,6 +10291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Imagens selecionadas (%lld)"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -8304,6 +10341,12 @@
             "value" : "Hình ảnh đã chọn (%lld)"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選定影像 (%lld)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8311,12 +10354,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選定影像 (%lld)"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "選定影像 (%lld)"
@@ -8374,10 +10411,22 @@
             "value" : "Οι επιλεγμένες εικόνες θα εμφανίζονται εδώ"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Selected images will appear here"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selected images will appear here"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -8458,6 +10507,12 @@
             "value" : "Gambar yang dipilih akan muncul di sini"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gambar terpilih akan muncul di sini"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8474,6 +10529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "선택한 이미지가 여기에 표시됩니다."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pasirinkti vaizdai bus rodomi čia"
           }
         },
         "ms" : {
@@ -8494,6 +10555,12 @@
             "value" : "Geselecteerde afbeeldingen verschijnen hier"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8504,6 +10571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "As imagens selecionadas aparecerão aqui"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -8548,6 +10621,12 @@
             "value" : "Hình ảnh được chọn sẽ xuất hiện ở đây"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選定的圖像將顯示在這裡"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8555,12 +10634,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選定的圖像將顯示在這裡"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "選定的圖像將顯示在這裡"
@@ -8618,10 +10691,22 @@
             "value" : "Ρυθμίσεις"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Settings"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Settings"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -8702,6 +10787,12 @@
             "value" : "Pengaturan"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengaturan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8718,6 +10809,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "설정"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nustatymai"
           }
         },
         "ms" : {
@@ -8738,6 +10835,12 @@
             "value" : "Instellingen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8748,6 +10851,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Definições"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -8792,6 +10901,12 @@
             "value" : "Cài đặt"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8799,12 +10914,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "設定"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
@@ -8862,10 +10971,22 @@
             "value" : "Κοινή χρήση"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Share"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -8946,6 +11067,12 @@
             "value" : "Bagikan"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagikan"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8962,6 +11089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "공유"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalintis"
           }
         },
         "ms" : {
@@ -8982,6 +11115,12 @@
             "value" : "Deel"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8992,6 +11131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Partilhar"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -9036,6 +11181,12 @@
             "value" : "Chia sẻ"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9043,12 +11194,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "分享"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "分享"
@@ -9106,10 +11251,22 @@
             "value" : "Κοινοποίηση όλων"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Share All"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share All"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -9190,6 +11347,12 @@
             "value" : "Bagikan Semua"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagikan Semua"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9206,6 +11369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모두 공유하기"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalintis viskuo"
           }
         },
         "ms" : {
@@ -9226,6 +11395,12 @@
             "value" : "Alles delen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9236,6 +11411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Partilhar tudo"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -9280,6 +11461,12 @@
             "value" : "Chia sẻ tất cả"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部分享"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9287,12 +11474,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全部分享"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "全部分享"
@@ -9350,10 +11531,22 @@
             "value" : "Κατάστημα"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Shop"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shop"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -9434,6 +11627,12 @@
             "value" : "Toko"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toko"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9450,6 +11649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "가게"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parduotuvė"
           }
         },
         "ms" : {
@@ -9470,6 +11675,12 @@
             "value" : "Winkel"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9480,6 +11691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loja"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -9524,6 +11741,12 @@
             "value" : "Cửa hàng"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "店鋪"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9531,12 +11754,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "店鋪"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "店鋪"
@@ -9594,10 +11811,22 @@
             "value" : "Επιτυχία"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Success"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Success"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -9678,6 +11907,12 @@
             "value" : "Berhasil"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berhasil"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9694,6 +11929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "성공"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pavyko"
           }
         },
         "ms" : {
@@ -9714,6 +11955,12 @@
             "value" : "Geslaagd"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9724,6 +11971,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sucesso"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -9768,6 +12021,12 @@
             "value" : "Thành công"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "成功"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9775,12 +12034,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "成功"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "成功"
@@ -9838,10 +12091,22 @@
             "value" : "Υποστηρίξτε μας"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Support Us"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support Us"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -9922,6 +12187,12 @@
             "value" : "Dukung Kami"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dukung Kami"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9938,6 +12209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "우리를 지원해주세요"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paremkite mus"
           }
         },
         "ms" : {
@@ -9958,6 +12235,12 @@
             "value" : "Steun ons"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9968,6 +12251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apoie-nos"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -10012,6 +12301,12 @@
             "value" : "Hỗ trợ chúng tôi"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持我們"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10019,12 +12314,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "支持我們"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "支持我們"
@@ -10082,10 +12371,22 @@
             "value" : "TaskNow - Λίστα με απλές εργασίες"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "TaskNow - Simple To Do List"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "TaskNow - Simple To Do List"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -10166,6 +12467,12 @@
             "value" : "TaskNow - Daftar Tugas Sederhana"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TaskNow - Daftar Tugas Sederhana"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10182,6 +12489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "TaskNow - 간단한 할 일 목록"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TaskNow – paprastas užduočių sąrašas"
           }
         },
         "ms" : {
@@ -10202,6 +12515,12 @@
             "value" : "TaskNow - Eenvoudige takenlijst"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10212,6 +12531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "TaskNow - Lista de tarefas simples"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -10256,6 +12581,12 @@
             "value" : "TaskNow - Danh sách việc cần làm đơn giản"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TaskNow - 簡單的待辦事項列表"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10267,17 +12598,288 @@
             "state" : "translated",
             "value" : "TaskNow - 簡單的待辦事項列表"
           }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TaskNow - 簡單的待辦事項列表"
-          }
         }
       }
     },
     "Terms of Service" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروط الخدمة"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия за ползване"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "সেবা শর্তাবলী"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Condicions del servei"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podmínky služby"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servicevilkår"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όροι Παροχής Υπηρεσιών"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Terms of Service"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Service"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Service"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Service"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de servicio"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de servicio"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de Servicio"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyttöehdot"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d'utilisation"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d'utilisation"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תנאי השירות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेवा की शर्तें"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uvjeti korištenja"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felhasználási feltételek"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketentuan Layanan"
+          }
+        },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Syarat Layanan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termini di servizio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用規約"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이용 약관"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naudojimosi sąlygos"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Syarat Perkhidmatan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vilkår for bruk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servicevoorwaarden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termos de Serviço"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termos de Serviço"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия использования"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podmienky služby"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Användarvillkor"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เงื่อนไขการให้บริการ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hizmet Şartları"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Умови користування"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều khoản dịch vụ"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服務條款"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务条款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服務條款"
+          }
+        }
+      }
     },
     "Unlock Premium Features" : {
       "localizations" : {
@@ -10329,10 +12931,22 @@
             "value" : "Ξεκλειδώστε Premium Χαρακτηριστικά"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Unlock Premium Features"
+          }
+        },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unlock Premium Features"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "en-GB" : {
@@ -10413,6 +13027,12 @@
             "value" : "Buka Fitur Premium"
           }
         },
+        "id-ID" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka Fitur Premium"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10429,6 +13049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "프리미엄 기능 잠금 해제"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atrakinite Premium funkcijas"
           }
         },
         "ms" : {
@@ -10449,6 +13075,12 @@
             "value" : "Ontgrendel premiumfuncties"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10459,6 +13091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desbloqueie recursos premium"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
         "ru" : {
@@ -10503,6 +13141,12 @@
             "value" : "Mở khóa các tính năng cao cấp"
           }
         },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解鎖高級功能"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10510,12 +13154,6 @@
           }
         },
         "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "解鎖高級功能"
-          }
-        },
-        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "解鎖高級功能"

@@ -13,7 +13,6 @@
 		EC0660062E67E3C9009E6E11 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EC0660052E67E3C9009E6E11 /* FirebaseCore */; };
 		EC0660082E67E458009E6E11 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0660072E67E457009E6E11 /* AdSupport.framework */; };
 		EC06600A2E67E467009E6E11 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0660092E67E466009E6E11 /* StoreKit.framework */; };
-		EC0660132E67F986009E6E11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0660122E67F986009E6E11 /* GoogleService-Info.plist */; };
 		EC3B94572F76F5EE0018B65F /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = EC3B94562F76F5EE0018B65F /* RevenueCat */; };
 		EC3B94592F76F5EE0018B65F /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = EC3B94582F76F5EE0018B65F /* RevenueCatUI */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		EC065FFE2E67E345009E6E11 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		EC0660072E67E457009E6E11 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EC0660092E67E466009E6E11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		EC0660122E67F986009E6E11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC20E3482E6531D4001FF513 /* jpg converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jpg converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,7 +64,6 @@
 		EC20E33F2E6531D4001FF513 = {
 			isa = PBXGroup;
 			children = (
-				EC0660122E67F986009E6E11 /* GoogleService-Info.plist */,
 				EC20E34A2E6531D4001FF513 /* jpg converter */,
 				EC065FFD2E67E345009E6E11 /* Frameworks */,
 				EC20E3492E6531D4001FF513 /* Products */,
@@ -195,7 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC0660132E67F986009E6E11 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 67;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = 5C778DVBP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -365,7 +361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Maicol.jpg-converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,7 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 67;
+				CURRENT_PROJECT_VERSION = 76;
 				DEVELOPMENT_TEAM = 5C778DVBP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -405,7 +401,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Maicol.jpg-converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -42,20 +42,24 @@ struct HomeView: View {
     @State private var selectedPhotos: [PhotosPickerItem] = []
     @State private var sessionStart = Date()
     @State private var hasPromptedForReview = false
+    @State private var hasShownInterstitialThisSession = false
     @State private var hasPresentedMainPaywallThisSession = false
     @State private var showMainPaywall = false
 
-    private var maxPickerSelectionCount: Int {
-        store.isPremium ? 15 : 1
-    }
-
     var body: some View {
+        let isPremium = store.isPremium
+        let maxPickerSelectionCount = isPremium ? 15 : 1
+        let pickerSubtitle = isPremium ? "Pick up to 15 at a time" : "Free: 1 photo at a time"
+
         NavigationStack {
             VStack(spacing: 0) {
                 ScrollView {
                     VStack(spacing: 14) {
                         // Image Selection Area
-                        imageSelectionView
+                        imageSelectionView(
+                            maxPickerSelectionCount: maxPickerSelectionCount,
+                            pickerSubtitle: pickerSubtitle
+                        )
                             .sectionCard()
                         
                         
@@ -125,18 +129,21 @@ struct HomeView: View {
             if !hasPromptedForReview && Date().timeIntervalSince(sessionStart) > 45 {
                 maybeRequestReview()
             }
-        }
-        .onChange(of: viewModel.shouldShowInterstitial) { oldValue, newValue in
-            if newValue && interstitialAdManager.isAdReady {
+
+            if !hasShownInterstitialThisSession &&
+                !store.isPremium &&
+                Date().timeIntervalSince(sessionStart) > 15 &&
+                interstitialAdManager.isAdReady {
                 let rootVC = UIApplication.shared.getRootViewController()
                 interstitialAdManager.showInterstitial(from: rootVC)
-                viewModel.shouldShowInterstitial = false
+                hasShownInterstitialThisSession = true
             }
         }
         .onAppear {
             store.loadStoredPurchases()
             viewModel.store = store
             sessionStart = Date()
+            hasShownInterstitialThisSession = false
             maybePresentMainPaywall()
         }
         .sheet(isPresented: $showMainPaywall) {
@@ -198,7 +205,7 @@ struct HomeView: View {
         }
     }
     
-    private var imageSelectionView: some View {
+    private func imageSelectionView(maxPickerSelectionCount: Int, pickerSubtitle: String) -> some View {
         VStack(spacing: 8) {
             Text("Select Images to Convert")
                 .font(.title2)
@@ -229,7 +236,7 @@ struct HomeView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(.primary)
                             
-                            Text(store.isPremium ? "Pick up to 15 at a time" : "Free: 1 photo at a time")
+                            Text(pickerSubtitle)
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
